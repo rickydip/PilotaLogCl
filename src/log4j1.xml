@@ -3,10 +3,9 @@
 <log4j:configuration>
 
 <appender name="FILE" class="org.apache.log4j.FileAppender">
-   <!--<param name="file" value="C:\\Users\\Rick\\Desktop\\SOLO_INFO.html"/>-->
-   <param name="file" value="/home/riccardo/Desktop/logs/SOLO_INFO.txt"/>
-  <!--  <layout class="org.apache.log4j.HTMLLayout" >  
-   <param name="LocationInfo" value="true" />  -->
+   
+   <param name="file" value="/home/riccardo/Desktop/logclass1_output/SOLO_INFO.txt"/>
+
    <layout class="org.apache.log4j.PatternLayout" >
            <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
    </layout>
@@ -19,20 +18,18 @@
 
 <appender name="FILE2" class="org.apache.log4j.FileAppender">
     <param name="Threshold" value="ERROR"/>  
- <!--  <param name="file" value="/C:\\Users\\Rick\\Desktop\\Threshold_ERROR_log.html"/> -->
-    <param name="file" value="/home/riccardo/Desktop/logs/Threshold_ERROR_log.txt"/>
-<!--    <layout class="org.apache.log4j.HTMLLayout" > 
-   <param name="LocationInfo" value="true" />  -->
+ 
+    <param name="file" value="/home/riccardo/Desktop/logclass1_output/Threshold_ERROR_log.txt"/>
+
    <layout class="org.apache.log4j.PatternLayout" >
           <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
    </layout>
 </appender>
 
 <appender name="FILE3" class="org.apache.log4j.FileAppender">
-     <!--  <param name="file" value="/C:\\Users\\Rick\\Desktop\\log.html"/> -->
-    <param name="file" value="/home/riccardo/Desktop/logs/log.txt"/>
-    <!-- <layout class="org.apache.log4j.HTMLLayout" > 
-    <param name="LocationInfo" value="true" /> -->
+  
+    <param name="file" value="/home/riccardo/Desktop/logclass1_output/log.txt"/>
+
     <layout class="org.apache.log4j.PatternLayout" >
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
    </layout>

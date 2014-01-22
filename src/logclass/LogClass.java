@@ -16,13 +16,13 @@ public class LogClass {
    
    
    //var di comodo
-   static boolean flag =false; //false usa il master_default; true avvia il processo di creazione del master_dinamic
+   static boolean flag =false; //con false usa il master_default; true avvia il processo di creazione del master_dinamic
    
     
    public static void main(String[] args) {
       
        
-     if(!flag){
+     if(flag){
          
      System.out.println("Utilizzo il file di configurazione di default");
           
@@ -52,6 +52,47 @@ public class LogClass {
      //###################
      //processo di creazione del file
      //###################
+     //i file contenenti le configurazioni da fondere sono:
+     String path_default="/home/riccardo/Desktop/LogClass2/master_default.xml";
+     String path_slave1="/home/riccardo/Desktop/LogClass2/slave1.xml";
+     String path_slave2="/home/riccardo/Desktop/LogClass2/slave2.xml";
+     //###################
+     
+     //nome usato nella creazione delle direcotory
+     String nome="master_default";
+     
+   
+     //tratto il file di log di default (del core)
+     InfoLogFile a =new InfoLogFile(path_default);
+       
+
+     //pattern di ricerca
+     String pattern1[]={"<appender name=\"","</appender>"};
+     String pattern2[]={"<logger name=\"", "</logger>"};
+     
+     //il percorso dove salvare i file che si creano nell'esecuzione
+       String radice=System.getProperty("user.dir")+ File.separator;
+       System.out.println("radice: "+radice);creaDir(radice+"file_elab");
+       creaDir(radice+"file_elab/"+nome);creaDir(radice+"file_elab/"+nome+"/appender");creaDir(radice+"file_elab/"+nome+"/logger");
+    
+     String file5= radice+"file_elab/"+nome+"/appender/";
+     String file6= radice+"file_elab/"+nome+"/logger/";  
+       
+     //creo i file di comodo che uso per comporre la parte logger del file di log finale
+    // File logger_completo =new File(radice+"file_elab/loggercompleto.xml");
+     //creo i file di comodo che uso per comporre la parte appender del file di log finale
+   //  File appender_completo =new File(radice+"file_elab/loggercompleto.xml");
+       
+     a.ricavaInfo_app(pattern1[0], pattern1[1],file5); //esegue operazioni su appender
+     a.ricavaInfo_log(pattern2[0], pattern2[1],file6); //esegue operazioni su logger 
+     
+    // String logger_completo=radice+"file_elab/loggercompleto.xml";
+    // a.componiFile(logger_completo, "/home/riccardo/Desktop/LogClass2/file_elab/master_default/logger/target1.xml");
+    // a.componiFile(logger_completo, "/home/riccardo/Desktop/LogClass2/file_elab/master_default/logger/target2.xml");
+     
+     
+     
+     
      
      
      }//if
@@ -134,7 +175,27 @@ public class LogClass {
       
    }//main
 
-  
+
+   
+   
+   
+
+   
+static void creaDir(String directoryName){
+        File theDir = new File(directoryName);
+
+  // if the directory does not exist, create it
+  if (!theDir.exists()) {
+    System.out.println("creating directory: " + directoryName);
+    boolean result = theDir.mkdir();  
+
+     if(result) {    
+       System.out.println("DIR created");  
+     }
+  }
+    }   
+   
+   
 
 }//class
 

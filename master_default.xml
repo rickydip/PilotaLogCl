@@ -16,10 +16,8 @@
 
 <appender name="FILE8" class="org.apache.log4j.FileAppender">
     <param name="Threshold" value="ERROR"/>  
- 
     <param name="file" value="/home/riccardo/Desktop/logclass_output/Threshold_ERROR_log.txt"/>
-
-   <layout class="org.apache.log4j.PatternLayout" >
+    <layout class="org.apache.log4j.PatternLayout" >
           <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
    </layout>
 </appender>
@@ -37,13 +35,13 @@
         <appender-ref ref="FILE8" />
         <appender-ref ref="FILE9" />
 </logger>
-
  <logger name="com.foo.bar" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
         <appender-ref ref="FILE9" />
  </logger>
+
 <logger name="logger" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />

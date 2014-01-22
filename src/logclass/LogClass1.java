@@ -16,10 +16,10 @@ public class LogClass1 {
     
     //attributi di classe
     
-    org.apache.log4j.Logger log1 = Logger.getLogger("com.foo");
-    org.apache.log4j.Logger logger1 = Logger.getLogger("com.foo.bar");
-  //  org.apache.log4j.Logger Logger1 = Logger.getLogger("logger");
-  //  org.apache.log4j.Logger Log1 = Logger.getLogger("log");
+    org.apache.log4j.Logger log1 = Logger.getLogger("pippo");
+    org.apache.log4j.Logger logger1 = Logger.getLogger("pluto");
+    org.apache.log4j.Logger Logger1 = Logger.getLogger("paperino");
+    org.apache.log4j.Logger Log1 = Logger.getLogger("paperina");
     
     
     
@@ -60,7 +60,7 @@ public class LogClass1 {
       logger1.warn("Warn Message! LogClass1");
       logger1.error("Error Message! LogClass1");
       logger1.fatal("Fatal Message! LogClass1"); 
-  /* 
+ 
       Logger1.trace("Trace Message! LogClass1");
       Logger1.debug("Debug Message! LogClass1");
       Logger1.info("Info Message! LogClass1");
@@ -74,7 +74,7 @@ public class LogClass1 {
       Log1.warn("Warn Message! LogClass1");
       Log1.error("Error Message! LogClass1");
       Log1.fatal("Fatal Message! LogClass1");
-    */  
+     
      }//metodo
    
    

@@ -44,7 +44,7 @@
     </layout>
 </appender>
 
-<logger name="com.foo" additivity="false">
+<logger name="Juventus" additivity="false">
     <level value="debug" />
     <appender-ref ref="FILE4" />
     <appender-ref ref="FILE5" />

@@ -15,7 +15,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 public class LogClass2 {
     
     //attributi di classe
-    org.apache.log4j.Logger log2 = Logger.getLogger("com.foo");
+    org.apache.log4j.Logger log2 = Logger.getLogger("Juventus");
     org.apache.log4j.Logger logger2 = Logger.getLogger("Milan");
     org.apache.log4j.Logger Logger2 = Logger.getLogger("Barcellona");
     org.apache.log4j.Logger Log2 = Logger.getLogger("Inter");

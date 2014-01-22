@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+<logger name="log4j.rootLogger" additivity="false">
+   <level value="DEBUG"/>	
+	
+   <!--<appender-ref ref="FILE*"/> -->
+
+</logger>
+</log4j:configuration>

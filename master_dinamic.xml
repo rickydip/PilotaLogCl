@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+
+<appender name="FILE7" class="org.apache.log4j.FileAppender">
+   <param name="file" value="/home/riccardo/Desktop/master_output/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+     <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+<appender name="FILE8" class="org.apache.log4j.FileAppender">
+    <param name="Threshold" value="ERROR"/>  
+ 
+    <param name="file" value="/home/riccardo/Desktop/master_output/Threshold_ERROR_log.txt"/>
+
+   <layout class="org.apache.log4j.PatternLayout" >
+          <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
+   </layout>
+</appender>
+
+<appender name="FILE9" class="org.apache.log4j.FileAppender">
+     <param name="file" value="/home/riccardo/Desktop/master_output/DEBUG.txt"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+        <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
+   </layout>
+</appender>
+
+<appender name="FILE" class="org.apache.log4j.FileAppender">
+   <param name="file" value="/home/riccardo/Desktop/master_output/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+       <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+<appender name="FILE2" class="org.apache.log4j.FileAppender">
+    <param name="Threshold" value="ERROR"/>  
+    <param name="file" value="/home/riccardo/Desktop/master_output/Threshold_ERROR_log.txt"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+       <param name="ConversionPattern" value="%d [%t] %-5p (%F:%L) %m%n"/>     
+    </layout>
+</appender>
+
+<appender name="FILE3" class="org.apache.log4j.FileAppender">
+    <param name="file" value="/home/riccardo/Desktop/master_output/DEBUG.txt"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+        <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
+    </layout>
+</appender>
+
+<appender name="FILE4" class="org.apache.log4j.RollingFileAppender">
+    <param name="file" value="/home/riccardo/Desktop/master_output/SOLO_INFO.txt"/>
+    <param name="MaxFileSize" value="10KB"/>
+    <param name="MaxBackupIndex" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+      <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n  (%F:%L)"/>     
+    </layout>
+    <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+<appender name="FILE5" class="org.apache.log4j.RollingFileAppender">
+    <param name="Threshold" value="ERROR"/>  
+    <param name="file" value="/home/riccardo/Desktop/master_output/Threshold_ERROR_log.txt"/>
+    <param name="MaxFileSize" value="10KB"/>
+    <param name="MaxBackupIndex" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+          <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
+    </layout>
+</appender>
+
+<appender name="FILE6" class="org.apache.log4j.RollingFileAppender">
+    <param name="file" value="/home/riccardo/Desktop/master_output/DEBUG.txt"/>
+    <param name="MaxFileSize" value="10KB"/>
+    <param name="MaxBackupIndex" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+      <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
+    </layout>
+</appender>
+
+
+<logger name="com.foo" additivity="true">
+        <level value="debug" />
+        <appender-ref ref="FILE7" />
+        <appender-ref ref="FILE8" />
+        <appender-ref ref="FILE9" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+        <appender-ref ref="FILE4" />
+        <appender-ref ref="FILE5" />
+        <appender-ref ref="FILE6" />
+</logger>
+
+ <logger name="com.foo.bar" additivity="true">
+        <level value="debug" />
+        <appender-ref ref="FILE7" />
+        <appender-ref ref="FILE8" />
+        <appender-ref ref="FILE9" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+ </logger>
+
+<logger name="logger" additivity="true">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+ </logger>
+
+<logger name="log" additivity="true">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+ </logger>
+
+
+<logger name="Milan" additivity="true">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+ </logger>
+ 
+<logger name="Barcellona" additivity="true">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+ </logger>
+
+<logger name="Inter" additivity="true">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+ </logger>
+
+
+
+<logger name="log4j.rootLogger" additivity="true">
+   <level value="DEBUG"/>
+   <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+    <appender-ref ref="FILE2" />
+    <appender-ref ref="FILE" />
+    <appender-ref ref="FILE3" />
+    <appender-ref ref="FILE7" />
+    <appender-ref ref="FILE8" />
+    <appender-ref ref="FILE9" />
+</logger>
+
+</log4j:configuration>
+

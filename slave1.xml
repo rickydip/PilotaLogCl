@@ -3,9 +3,9 @@
 <log4j:configuration>
 
 <appender name="FILE" class="org.apache.log4j.FileAppender">
+   
+   <param name="file" value="/home/riccardo/Desktop/logclass1_output/SOLO_INFO.txt"/>
 
-   <param name="file" value="/home/riccardo/Desktop/logclass_output/SOLO_INFO.txt"/>
- 
    <layout class="org.apache.log4j.PatternLayout" >
            <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
    </layout>
@@ -19,16 +19,16 @@
 <appender name="FILE2" class="org.apache.log4j.FileAppender">
     <param name="Threshold" value="ERROR"/>  
  
-    <param name="file" value="/home/riccardo/Desktop/logclass_output/Threshold_ERROR_log.txt"/>
+    <param name="file" value="/home/riccardo/Desktop/logclass1_output/Threshold_ERROR_log.txt"/>
 
    <layout class="org.apache.log4j.PatternLayout" >
-          <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
+          <param name="ConversionPattern" value="%d [%t] %-5p (%F:%L) %m%n"/>     
    </layout>
 </appender>
 
 <appender name="FILE3" class="org.apache.log4j.FileAppender">
- 
-    <param name="file" value="/home/riccardo/Desktop/logclass_output/log.txt"/>
+  
+    <param name="file" value="/home/riccardo/Desktop/logclass1_output/DEBUG.txt"/>
 
     <layout class="org.apache.log4j.PatternLayout" >
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
@@ -43,12 +43,13 @@
         <appender-ref ref="FILE3" />
 </logger>
 
- <logger name="com.foo.bar" additivity="false">
+<logger name="com.foo.bar" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
         <appender-ref ref="FILE3" />
  </logger>
+ 
 <logger name="logger" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />

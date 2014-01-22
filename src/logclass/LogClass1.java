@@ -9,13 +9,20 @@ package logclass;
 
 import java.io.File;
 import org.apache.log4j.Logger;
-//import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
 
 
 public class LogClass1 {
     
     //attributi di classe
+    
+    org.apache.log4j.Logger log1 = Logger.getLogger("com.foo");
+    org.apache.log4j.Logger logger1 = Logger.getLogger("com.foo.bar");
+  //  org.apache.log4j.Logger Logger1 = Logger.getLogger("logger");
+  //  org.apache.log4j.Logger Log1 = Logger.getLogger("log");
+    
+    
+    
     
     
     
@@ -28,50 +35,65 @@ public class LogClass1 {
     
    public void metodo(){
            
-           
-    org.apache.log4j.Logger log = Logger.getLogger("com.foo");
-    org.apache.log4j.Logger logger = Logger.getLogger("com.foo.bar");
-    org.apache.log4j.Logger logger2 = Logger.getLogger("logger");
-    org.apache.log4j.Logger log2 = Logger.getLogger("log");
-    
-    
-    
- //  public static void main(String[] args) {
+   //################################################################## 
+   //gestione del file di log locale  
+   //################################################################## 
+    String log4jConfigFile = System.getProperty("user.dir")
+                + File.separator + "slave1.xml"; 
+    System.out.println(log4jConfigFile);
+    DOMConfigurator.configure(log4jConfigFile);
+   //################################################################## 
       
-      //DOMConfigurator.configure("C:\\Users\\Rick\\Documents\\NetBeansProjects\\LogClass\\src\\log4j.xml");
-      DOMConfigurator.configure("/home/riccardo/Desktop/LogClass/src/log4j1.xml");
-      //PropertyConfigurator.configure("/home/riccardo/Desktop/LogClass/src/log4j.properties");
-      //BasicConfigurator.configure(); 
       
-      log.trace("Trace Message!");
-      log.debug("Debug Message!");
-      log.info("Info Message!");
-      log.warn("Warn Message!");
-      log.error("Error Message!");
-      log.fatal("Fatal Message!");
+      
+     
+      log1.trace("Trace Message! LogClass1");
+      log1.debug("Debug Message! LogClass1");
+      log1.info("Info Message! LogClass1");
+      log1.warn("Warn Message! LogClass1");
+      log1.error("Error Message! LogClass1");
+      log1.fatal("Fatal Message! LogClass1");
    
-      logger.trace("Trace Message!");
-      logger.debug("Debug Message!");
-      logger.info("Info Message!");
-      logger.warn("Warn Message!");
-      logger.error("Error Message!");
-      logger.fatal("Fatal Message!"); 
-   
-      logger2.trace("Trace Message!");
-      logger2.debug("Debug Message!");
-      logger2.info("Info Message!");
-      logger2.warn("Warn Message!");
-      logger2.error("Error Message!");
-      logger2.fatal("Fatal Message!");
+      logger1.trace("Trace Message! LogClass1");
+      logger1.debug("Debug Message! LogClass1");
+      logger1.info("Info Message! LogClass1");
+      logger1.warn("Warn Message! LogClass1");
+      logger1.error("Error Message! LogClass1");
+      logger1.fatal("Fatal Message! LogClass1"); 
+  /* 
+      Logger1.trace("Trace Message! LogClass1");
+      Logger1.debug("Debug Message! LogClass1");
+      Logger1.info("Info Message! LogClass1");
+      Logger1.warn("Warn Message! LogClass1");
+      Logger1.error("Error Message! LogClass1");
+      Logger1.fatal("Fatal Message! LogClass1");
       
-      log2.trace("Trace Message!");
-      log2.debug("Debug Message!");
-      log2.info("Info Message!");
-      log2.warn("Warn Message!");
-      log2.error("Error Message!");
-      log2.fatal("Fatal Message!");
-      
+      Log1.trace("Trace Message! LogClass1");
+      Log1.debug("Debug Message! LogClass1");
+      Log1.info("Info Message! LogClass1");
+      Log1.warn("Warn Message! LogClass1");
+      Log1.error("Error Message! LogClass1");
+      Log1.fatal("Fatal Message! LogClass1");
+    */  
      }//metodo
-}
+   
+   
+   
+   
+   
+   static void creaDir(String directoryName){
+        File theDir = new File(directoryName);
+
+  // if the directory does not exist, create it
+  if (!theDir.exists()) {
+    System.out.println("creating directory: " + directoryName);
+    boolean result = theDir.mkdir();  
+
+     if(result) {    
+       System.out.println("DIR created");  
+     }
+  }
+    }
+}//class
 
 

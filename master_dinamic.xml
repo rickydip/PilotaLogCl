@@ -92,7 +92,7 @@
 </appender>
 
 
-<logger name="com.foo" additivity="true">
+<logger name="com.foo" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
@@ -105,7 +105,7 @@
         <appender-ref ref="FILE6" />
 </logger>
 
- <logger name="com.foo.bar" additivity="true">
+ <logger name="com.foo.bar" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
@@ -115,7 +115,7 @@
         <appender-ref ref="FILE3" />
  </logger>
 
-<logger name="logger" additivity="true">
+<logger name="logger" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
@@ -130,7 +130,7 @@
  </logger>
 
 
-<logger name="Milan" additivity="true">
+<logger name="Milan" additivity="false">
     <level value="debug" />
     <appender-ref ref="FILE4" />
     <appender-ref ref="FILE5" />
@@ -144,7 +144,7 @@
     <appender-ref ref="FILE6" />
  </logger>
 
-<logger name="Inter" additivity="true">
+<logger name="Inter" additivity="false">
     <level value="debug" />
     <appender-ref ref="FILE4" />
     <appender-ref ref="FILE5" />
@@ -153,7 +153,7 @@
 
 
 
-<logger name="log4j.rootLogger" additivity="true">
+<logger name="log4j.rootLogger" additivity="false">
    <level value="DEBUG"/>
    <appender-ref ref="FILE4" />
     <appender-ref ref="FILE5" />

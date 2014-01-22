@@ -4,7 +4,6 @@ package logclass;
 
 import java.io.File;
 import org.apache.log4j.Logger;
-
 import org.apache.log4j.xml.DOMConfigurator;
 
 
@@ -14,11 +13,30 @@ public class LogClass {
    private static org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
    private static org.apache.log4j.Logger Log0 = Logger.getLogger("log");
     
-    
+   
+   
+   //var di comodo
+   static boolean flag =false; //false usa il master_default; true avvia il processo di creazione del master_dinamic
+   
     
    public static void main(String[] args) {
+      
+       
+     if(!flag){
          
-            
+     System.out.println("Utilizzo il file di configurazione di default");
+          
+     String log4jConfigFile = System.getProperty("user.dir")
+                + File.separator + "master_default.xml";
+    
+     System.out.println(log4jConfigFile);
+     DOMConfigurator.configure(log4jConfigFile); 
+     
+         
+     }//  
+     else{ 
+         
+         
      String log4jConfigFile = System.getProperty("user.dir")
                 + File.separator + "master_dinamic.xml";
      
@@ -29,25 +47,39 @@ public class LogClass {
      boolean existsFile = file.isFile();
      if (!existsFile) {
          
-     System.out.println("Utilizzo il file di configurazione di default");
+     System.out.println("Il file di configurazione master_dinamic non esiste, inizio il processo di creazione");
      
+     //###################
+     //processo di creazione del file
+     //###################
      
-     log4jConfigFile = System.getProperty("user.dir")
-                + File.separator + "master_default.xml";
-    
-     System.out.println(log4jConfigFile);
-     DOMConfigurator.configure(log4jConfigFile); 
      
      }//if
      
-     //altrimenti
+     //se esiste lo apro
      else{
-
-         System.out.println("ho trovato il file di configurazione creato dinamicamente");
+     
+         System.out.println("Il file di configurazione master_dinamic ESISTE, lo utilizzo.");    
+     
+         log4jConfigFile = System.getProperty("user.dir")
+                + File.separator + "master_default.xml";
+         
          System.out.println(log4jConfigFile);
          DOMConfigurator.configure(log4jConfigFile);
+     }//else
+     }//if(flag)
+   
+     
+     
+     
+     
+     
+     
+    
+
+         
          //da implementare
-         //1° dichiarare il path che si vuole abbiano i 3 file del masterlogger (la struttua dei 3 file è standard )
+         //dichiarare il path che si vuole abbiano i 3 file del masterlogger (la struttua dei 3 file è standard )
          //per ogni frammento appender prodotto per ogni file di configurazione di log
          //bisogna modificare il valore value="path" del campo param di <appender>
          //Sommare in un unico file i frammenti appender (modificati)
@@ -59,7 +91,7 @@ public class LogClass {
          
          
          
-     }
+    
       
      
      

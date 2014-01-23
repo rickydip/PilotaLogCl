@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
+import logclass.slave.LogClass3;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -40,9 +41,9 @@ public class LogClass {
          
      System.out.println("Il file di configurazione master_dinamic non esiste, inizio il processo di creazione");
    
-     //###################
-     //inizio processo di creazione del file
-     //###################
+     //######################################
+     //inizio processo di creazione del file#
+     //######################################
      
      //#################################
      //Componenti software che voglio includere nel processo di creazione dinamica del file di log
@@ -53,7 +54,8 @@ public class LogClass {
      String path1 = radice+"master/";
      String path2 = radice+"slave1/";
      String path3 = radice+"slave2/";
-     String file_configurazione = "";
+     String path4 = radice+"slave3/";
+    // String file_configurazione = "";
      
      System.out.println("I path dei componenti software che partecipano al processo di composizione dimanica sono:");
      System.out.println(path1);
@@ -61,13 +63,13 @@ public class LogClass {
      System.out.println(path3); 
      
      //vettore input con le componenti non validate
-     int n=3;
+     int n=4;
      String[] vett= new String[n];
      
      vett[0]=path1;
      vett[1]=path2;
      vett[2]=path3;
-     
+     vett[3]=path4;
          
      
      //########################
@@ -166,6 +168,8 @@ public class LogClass {
       LogClass2 b = new LogClass2();
       b.metodo();
       
+      LogClass3 c = new LogClass3();
+      c.metodo();
       
    }//main
    
@@ -444,7 +448,19 @@ static int stringToFile(String path, String text){
 
 
 
+static void creaDir(String directoryName){
+        File theDir = new File(directoryName);
 
+  // if the directory does not exist, create it
+  if (!theDir.exists()) {
+    System.out.println("creating directory: " + directoryName);
+    boolean result = theDir.mkdir();  
+
+     if(result) {    
+       System.out.println("DIR created");  
+     }
+  }
+    }
 
 
 

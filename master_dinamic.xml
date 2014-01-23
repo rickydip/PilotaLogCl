@@ -93,6 +93,47 @@
       <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
     </layout>
 </appender>
+<appender name="FILE66" class="org.apache.log4j.RollingFileAppender">
+    <!-- specifica il file dove salvare il logger -->
+    <param name="file" value="/home/riccardo/Desktop/logclass2_output/SOLO_INFO.txt"/>
+    <!-- specifica la dimensione massima del file di backup -->
+    <param name="MaxFileSize" value="10KB"/>
+    <!-- specifica il numero di file di backup -->
+    <param name="MaxBackupIndex" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+      <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
+    </layout>
+    <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+<appender name="FILE67" class="org.apache.log4j.RollingFileAppender">
+    <param name="Threshold" value="ERROR"/>  
+    <!-- specifica il file dove salvare il logger -->
+    <param name="file" value="/home/riccardo/Desktop/logclass2_output/Threshold_ERROR_log.txt"/>
+    <!-- specifica la dimensione massima del file di backup -->
+    <param name="MaxFileSize" value="10KB"/>
+    <!-- specifica il numero di file di backup -->
+    <param name="MaxBackupIndex" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+          <param name="ConversionPattern" value="%5p [%t] (%F:%L) - %m%n"/>     
+    </layout>
+</appender>
+
+<appender name="FILE68" class="org.apache.log4j.RollingFileAppender">
+    <!-- specifica il file dove salvare il logger -->
+    <param name="file" value="/home/riccardo/Desktop/logclass2_output/DEBUG.txt"/>
+    <!-- specifica la dimensione massima del file di backup -->
+    <param name="MaxFileSize" value="10KB"/>
+    <!-- specifica il numero di file di backup -->
+    <param name="MaxBackupIndex" value="3"/>
+    <layout class="org.apache.log4j.PatternLayout" >
+      <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
+    </layout>
+</appender>
 <logger name="com.foo" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
@@ -173,6 +214,12 @@
     <appender-ref ref="FILE5" />
     <appender-ref ref="FILE6" />
  </logger>
+<logger name="italia" additivity="false">
+    <level value="debug" />
+    <appender-ref ref="FILE66" />
+    <appender-ref ref="FILE67" />
+    <appender-ref ref="FILE68" />
+</logger>
 <logger name="log4j.rootLogger" additivity="false">
 <level value="DEBUG"/>
 <appender-ref ref="FILE7"/>
@@ -184,5 +231,8 @@
 <appender-ref ref="FILE4"/>
 <appender-ref ref="FILE5"/>
 <appender-ref ref="FILE6"/>
+<appender-ref ref="FILE66" />
+<appender-ref ref="FILE67" />
+<appender-ref ref="FILE68" />
 </logger>
 </log4j:configuration>

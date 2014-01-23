@@ -1,0 +1,27 @@
+<logger name="Juventus" additivity="false">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+</logger>
+
+<logger name="Milan" additivity="false">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+ </logger>
+ 
+<logger name="Barcellona" additivity="false">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+ </logger>
+
+<logger name="Inter" additivity="false">
+    <level value="debug" />
+    <appender-ref ref="FILE4" />
+    <appender-ref ref="FILE5" />
+    <appender-ref ref="FILE6" />
+ </logger>

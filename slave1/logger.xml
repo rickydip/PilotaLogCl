@@ -1,0 +1,27 @@
+<logger name="pippo" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+</logger>
+
+<logger name="pluto" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+ </logger>
+
+<logger name="paperino" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+ </logger>
+
+<logger name="paperina" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" />
+ </logger>

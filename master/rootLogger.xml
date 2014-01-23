@@ -1,0 +1,3 @@
+<appender-ref ref="FILE7"/>
+<appender-ref ref="FILE8"/>
+<appender-ref ref="FILE9"/>

@@ -1,0 +1,8 @@
+2014-01-24 00:31:19 INFO [logclass.LogClass:109] - Info Message! LogClass
+2014-01-24 00:31:19 INFO [logclass.LogClass:116] - Info Message! LogClass
+2014-01-24 00:31:19 INFO [logclass.LogClass:123] - Info Message! LogClass
+2014-01-24 00:31:19 INFO [logclass.LogClass:130] - Info Message! LogClass
+2014-01-24 00:31:21 INFO [logclass.LogClass:109] - Info Message! LogClass
+2014-01-24 00:31:21 INFO [logclass.LogClass:116] - Info Message! LogClass
+2014-01-24 00:31:21 INFO [logclass.LogClass:123] - Info Message! LogClass
+2014-01-24 00:31:21 INFO [logclass.LogClass:130] - Info Message! LogClass

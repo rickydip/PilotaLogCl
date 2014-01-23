@@ -1,0 +1,16 @@
+2014-01-24 00:31:19,727 [main] ERROR (LogClass1.java:54) Error Message! LogClass1
+2014-01-24 00:31:19,727 [main] FATAL (LogClass1.java:55) Fatal Message! LogClass1
+2014-01-24 00:31:19,727 [main] ERROR (LogClass1.java:61) Error Message! LogClass1
+2014-01-24 00:31:19,727 [main] FATAL (LogClass1.java:62) Fatal Message! LogClass1
+2014-01-24 00:31:19,728 [main] ERROR (LogClass1.java:68) Error Message! LogClass1
+2014-01-24 00:31:19,728 [main] FATAL (LogClass1.java:69) Fatal Message! LogClass1
+2014-01-24 00:31:19,728 [main] ERROR (LogClass1.java:75) Error Message! LogClass1
+2014-01-24 00:31:19,728 [main] FATAL (LogClass1.java:76) Fatal Message! LogClass1
+2014-01-24 00:31:21,275 [main] ERROR (LogClass1.java:54) Error Message! LogClass1
+2014-01-24 00:31:21,275 [main] FATAL (LogClass1.java:55) Fatal Message! LogClass1
+2014-01-24 00:31:21,275 [main] ERROR (LogClass1.java:61) Error Message! LogClass1
+2014-01-24 00:31:21,275 [main] FATAL (LogClass1.java:62) Fatal Message! LogClass1
+2014-01-24 00:31:21,277 [main] ERROR (LogClass1.java:68) Error Message! LogClass1
+2014-01-24 00:31:21,277 [main] FATAL (LogClass1.java:69) Fatal Message! LogClass1
+2014-01-24 00:31:21,277 [main] ERROR (LogClass1.java:75) Error Message! LogClass1
+2014-01-24 00:31:21,277 [main] FATAL (LogClass1.java:76) Fatal Message! LogClass1

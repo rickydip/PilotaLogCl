@@ -26,28 +26,13 @@ public class LogClass {
  
     
    public static void main(String[] args) {
-    
-   String log4jConfigFile = System.getProperty("user.dir")
-                + File.separator + "master_dinamic.xml";    
-       
    
-   
-   //apro il file master_dinamic.xml
-     File  file =new File(log4jConfigFile);
+//###############################################
+//Componenti software che voglio includere nel  #
+//processo di creazione dinamica del file di log#
+//###############################################     
      
-     //se non esiste
-     boolean existsFile = file.isFile();
-     if (!existsFile) {
-         
-     System.out.println("Il file di configurazione master_dinamic non esiste, inizio il processo di creazione");
-   
-     //######################################
-     //inizio processo di creazione del file#
-     //######################################
-     
-     //#################################
-     //Componenti software che voglio includere nel processo di creazione dinamica del file di log
-     
+     //path del progetto  
      String radice = System.getProperty("user.dir")
                 + File.separator;
      
@@ -55,79 +40,67 @@ public class LogClass {
      String path2 = radice+"slave1/";
      String path3 = radice+"slave2/";
      String path4 = radice+"slave3/";
-    // String file_configurazione = "";
+    
+     //numero di componenti software da gestire nella
+     //creazione dinamica del file di conf del log
+     int n=4;
      
      System.out.println("I path dei componenti software che partecipano al processo di composizione dimanica sono:");
      System.out.println(path1);
      System.out.println(path2);
-     System.out.println(path3); 
+     System.out.println(path3);
+     System.out.println(path4); 
      
-     //vettore input con le componenti non validate
-     int n=4;
+     //vettore input preliminare riempito con le componenti software
      String[] vett= new String[n];
-     
      vett[0]=path1;
      vett[1]=path2;
      vett[2]=path3;
-     vett[3]=path4;
-         
+     vett[3]=path4;       
+       
+//#################################       
+       
+//dichiaro il path del file di configurazione di log4j   
+ String log4jConfigFile = System.getProperty("user.dir")
+                + File.separator + "master_dinamic.xml";    
+       
+     //effettuo un controllo sulla sua esistanza  
+     File  file =new File(log4jConfigFile);
      
-     //########################
-     //Processo di validazione# 
-     //########################
-     String[] vett_validato= new String[n];
-     int flag=0;
-     int j=0;//dim del vettore validato
-     for(int i=0; i<n;i++){
-     flag=validaPath(vett[i]);
-     if(flag==0){vett_validato[j]=vett[i];j++;}
-     flag=0;
-     }//
-     
-     //debug
-     for(int i=0;i<j;i++) System.out.println("Componente software validato: "+vett_validato[i]);
-     //
-
-     //adesso vett_validato contiene l'input corretto da passare 
-     //al processo di composizione del file di configurazione
-     
-     //#########################
-     //Processo di composizione# 
-     //#########################
-     String log_finale="";
-     log_finale=componiConfLog(vett_validato,j,radice);
-     
-     System.out.println("#######################################");
-     //System.out.println(log_finale);
-     
-     int alert=0;
-     
-     alert=stringToFile(log4jConfigFile,log_finale);
-     
-     System.out.println(log4jConfigFile);
-     
-     if(alert==1){
-     
-     System.out.println("ERRORE nel processo di creazione");
-     
-     }else{
-         
-     //System.out.println(log4jConfigFile);
-         DOMConfigurator.configure(log4jConfigFile);
-     }
+    
+     boolean existsFile = file.isFile();
      
      
-     }//!existsFile
-     
-     else{
+     /*
+     //se esiste
+     if(existsFile){
          System.out.println("Il file di configurazione master_dinamic esiste, non lo creo, la simulazione prosegue normalmente.");  
-         System.out.println();
-         System.out.println(log4jConfigFile);
          DOMConfigurator.configure(log4jConfigFile);
      }
+     */
+     
+     //se non esiste lo creo
+     if (!existsFile) {
+         
+     System.out.println("master_dinamic.xml non esiste, inizio il processo di creazione DINAMICO");
+     
+     int flag=0;
+     //Routine di creazione
+     //#######################################################
+     flag=creaFileConfigurazioneLog(n,vett,log4jConfigFile,radice);
+     //#######################################################
+     
+     if(flag==0){
+         //System.out.println(log4jConfigFile);
+         DOMConfigurator.configure(log4jConfigFile);
      
         
-         
+     
+     }//if
+     }//!existsFile
+     
+          
+     
       //#################################
       //esecuzione del programma master##
       //#################################
@@ -171,11 +144,70 @@ public class LogClass {
       LogClass3 c = new LogClass3();
       c.metodo();
       
+      
+      //CANCELLO il file di conf di log per esigenze operative 
+        deleteFile(log4jConfigFile); 
+      
+       /*
+       boolean ok;
+       File f = new File(radice +"/LOGS");
+       ok=deleteDirectory(f);
+       */
    }//main
    
+
+   
+static int creaFileConfigurazioneLog(int n, String[] vett, String log4jConfigFile, String radice){
+
+     //########################
+     //Processo di validazione# 
+     //########################
+     //vettore che conterrà solo le componenti sw validate
+     String[] vett_validato= new String[n];
+     int flag=0;
+     int j=0;//dim del vettore validato
+     
+     for(int i=0; i<n;i++){
+         flag=validaComponenteSW(vett[i]);
+         if(flag==0){vett_validato[j]=vett[i];j++;}
+     flag=0;
+     }//
+     
+     //debug
+     for(int i=0;i<j;i++){System.out.println("Componente software validato: "+vett_validato[i]);}
+     //
+
+     //adesso vett_validato contiene l'input corretto da passare 
+     //al processo di composizione del file di configurazione
+     
+     //#########################
+     //Processo di composizione# 
+     //#########################
+     
+     String log_finale = "";
+     
+     //stringa che contiene la configurazione finale
+     log_finale=componiConfLog(vett_validato,j,radice);
+     
+     //System.out.println(log_finale);
+     
+     int alert=0;
+     
+     //salvo la stringa contenente la configurazione finale  
+     //sul file deputato ad essere il file di configurazione
+     
+     alert=stringToFile(log4jConfigFile,log_finale);
+     
+     System.out.println(log4jConfigFile);
+     
+     if(alert==1){System.out.println("ERRORE nel processo di creazione");}
+     
+     return alert;
+     }//creaFileConfigurazioneLog
    
    
- /**
+ 
+/**
   * Questa funzione serve per validare un componente software 
   * rispetto al processo di creazione dinamica del file di 
   * configurazione di log4j. La validazione consiste nella 
@@ -189,32 +221,32 @@ public class LogClass {
   * @return 0 tutto ok
   * @return 1 almeno 1 file non è stato trovato
   */  
- static int validaPath(String path){
+static int validaComponenteSW(String path){
      //flag restituito 
      int flag=0;
-     //###################################
-     //Verificare eisistenza appender.xml#
-     //###################################
+     //##################################
+     //Verificare esistenza appender.xml#
+     //##################################
      String appender=path+"/appender.xml";
      //apro il file 
      flag=validaFile(appender);
-     //#################################
-     //Verificare eisistenza logger.xml#
-     //#################################
+     //################################
+     //Verificare esistenza logger.xml#
+     //################################
      if(flag==0){
      String logger=path+"/logger.xml";
      flag=validaFile(logger);
      }
-     //#####################################
-     //Verificare eisistenza rootLogger.xml#
-     //#####################################
+     //####################################
+     //Verificare esistenza rootLogger.xml#
+     //####################################
      if(flag==0){
      String rootLogger=path+"/rootLogger.xml";
      //apro il file 
       flag=validaFile(rootLogger);
      }
 return flag;
-}   
+}//validaPath   
    
 /**
  * Questo metodo compone dinamicamente il file di configurazione di log4j a partire
@@ -262,15 +294,6 @@ static String componiConfLog(String[] vett_ok,int n,String radice){
     
  return Log_Finale;
 }//componiConfLog 
-
-
-
-
-
-
-
-
-
 
 /**
  * Questo metodo preleva tutti i frammenti di tipo appender da tutti i componenti 
@@ -441,13 +464,15 @@ static int stringToFile(String path, String text){
            out.close();
        }//finally
        
-       
-    return flag;
+ return flag;
 } //strinToFile
 
 
 
-
+/**
+ * Questo metodo crea una direcotory dato il percorso con nome
+ * @param directoryName 
+ */
 static void creaDir(String directoryName){
         File theDir = new File(directoryName);
 
@@ -462,10 +487,32 @@ static void creaDir(String directoryName){
   }
     }
 
+/**
+ * 
+ * @param file 
+ */
+static void deleteFile(String file){
+   // Creo un oggetto file
+    File f = new File(file);
+    f.delete();
+    
+}//CancellaFile
 
 
-
-
+public static boolean deleteDirectory(File path) {
+             if(path.exists()) {
+              File[] files = path.listFiles();
+              for(int i=0; i<files.length; i++) {
+                    if(files[i].isDirectory()) {
+                        deleteDirectory(files[i]);
+                    }
+                    else {
+                        files[i].delete();
+                    }
+              }
+      }
+      return(path.delete());
+}
 
 }//class
 

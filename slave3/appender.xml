@@ -1,6 +1,6 @@
 <appender name="FILE66" class="org.apache.log4j.RollingFileAppender">
     <!-- specifica il file dove salvare il logger -->
-    <param name="file" value="/home/riccardo/Desktop/logclass2_output/SOLO_INFO.txt"/>
+    <param name="file" value="LOGS/logclass2_output/SOLO_INFO.txt"/>
     <!-- specifica la dimensione massima del file di backup -->
     <param name="MaxFileSize" value="10KB"/>
     <!-- specifica il numero di file di backup -->
@@ -18,7 +18,7 @@
 <appender name="FILE67" class="org.apache.log4j.RollingFileAppender">
     <param name="Threshold" value="ERROR"/>  
     <!-- specifica il file dove salvare il logger -->
-    <param name="file" value="/home/riccardo/Desktop/logclass2_output/Threshold_ERROR_log.txt"/>
+    <param name="file" value="LOGS/logclass2_output/Threshold_ERROR_log.txt"/>
     <!-- specifica la dimensione massima del file di backup -->
     <param name="MaxFileSize" value="10KB"/>
     <!-- specifica il numero di file di backup -->
@@ -30,7 +30,7 @@
 
 <appender name="FILE68" class="org.apache.log4j.RollingFileAppender">
     <!-- specifica il file dove salvare il logger -->
-    <param name="file" value="/home/riccardo/Desktop/logclass2_output/DEBUG.txt"/>
+    <param name="file" value="LOGS/logclass2_output/DEBUG.txt"/>
     <!-- specifica la dimensione massima del file di backup -->
     <param name="MaxFileSize" value="10KB"/>
     <!-- specifica il numero di file di backup -->

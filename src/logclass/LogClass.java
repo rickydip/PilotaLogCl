@@ -16,12 +16,17 @@ public class LogClass {
    
    
    //var di comodo
-   static boolean flag =false; //con false usa il master_default; true avvia il processo di creazione del master_dinamic
+  // static boolean flag =false; //con false usa il master_default; true avvia il processo di creazione del master_dinamic
    
     
    public static void main(String[] args) {
-      
+    
        
+       
+       
+       
+       
+ /*      
      if(flag){
          
      System.out.println("Utilizzo il file di configurazione di default");
@@ -110,7 +115,7 @@ public class LogClass {
      }//else
      }//if(flag)
    
-     
+   */  
      
      
      
@@ -119,22 +124,12 @@ public class LogClass {
     
 
          
-         //da implementare
-         //dichiarare il path che si vuole abbiano i 3 file del masterlogger (la struttua dei 3 file è standard )
-         //per ogni frammento appender prodotto per ogni file di configurazione di log
-         //bisogna modificare il valore value="path" del campo param di <appender>
-         //Sommare in un unico file i frammenti appender (modificati)
-         //Sommare in un unico file i frammenti logger
-         //comporre il rootlogger (devono esserci n entri, ognuna col riferimento <appender-ref ref="FILE7"/> dove "FILE7" è memorizzato nel campo name di ogni appender)
-         //aggiungere tesca e coda 
-         //
-         //
+                  
          
          
-         
-    
-      
-     
+      //#################################
+      //esecuzione del programma master##
+      //#################################
      
       log0.trace("Trace Message! LogClass");
       log0.debug("Debug Message! LogClass");

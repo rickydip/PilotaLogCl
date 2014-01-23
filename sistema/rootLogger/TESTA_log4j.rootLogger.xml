@@ -1,2 +1,0 @@
-<logger name="log4j.rootLogger" additivity="false">
-	 <level value="DEBUG"/>

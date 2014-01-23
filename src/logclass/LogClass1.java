@@ -38,10 +38,10 @@ public class LogClass1 {
    //################################################################## 
    //gestione del file di log locale  
    //################################################################## 
-    String log4jConfigFile = System.getProperty("user.dir")
-                + File.separator + "slave1.xml"; 
-    System.out.println(log4jConfigFile);
-    DOMConfigurator.configure(log4jConfigFile);
+   // String log4jConfigFile = System.getProperty("user.dir")
+   //             + File.separator + "slave1.xml"; 
+   // System.out.println(log4jConfigFile);
+   // DOMConfigurator.configure(log4jConfigFile);
    //################################################################## 
       
       

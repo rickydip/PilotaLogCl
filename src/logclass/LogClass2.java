@@ -33,11 +33,11 @@ public class LogClass2 {
      //################################################################## 
      //gestione del file di log locale  
      //##################################################################  
-     String log4jConfigFile = System.getProperty("user.dir")
-                + File.separator + "slave2.xml"; 
-      
-     System.out.println(log4jConfigFile);
-     DOMConfigurator.configure(log4jConfigFile);
+     //String log4jConfigFile = System.getProperty("user.dir")
+     //           + File.separator + "slave2.xml"; 
+     // 
+     //System.out.println(log4jConfigFile);
+     //DOMConfigurator.configure(log4jConfigFile);
      //##################################################################   
      //il file di log implementa politiche di rolling
      //################################################################## 

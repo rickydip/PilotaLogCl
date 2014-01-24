@@ -197,7 +197,15 @@ public class LogClass {
    }//main
    
 
-   
+/**
+ * Funzione principale del progetto
+ * @param n dim del vettore vett
+ * @param vett vettore contenente i path delle componenti validate
+ * @param log4jConfigFile path del futuro file di configurazione di log4j
+ * @param radice path del progetto
+ * @return 0 procedura corretta
+ * @return 1 errore 
+ */   
 static int creaFileConfigurazioneLog(int n, String[] vett, String log4jConfigFile, String radice){
 
      //########################
@@ -251,16 +259,18 @@ static int creaFileConfigurazioneLog(int n, String[] vett, String log4jConfigFil
 /**
   * Questa funzione serve per validare un componente software 
   * rispetto al processo di creazione dinamica del file di 
-  * configurazione di log4j. La validazione consiste nella 
-  * verifica dell'esistenza dei 3 file "frammenti" richiesti:
-  * Non viene effettuato nessun controllo sul contenuto dei file
+  * configurazione di log4j. La "validazione" consiste nella 
+  * verifica dell'esistenza dei 3 file "frammenti" richiesti come 
+  * condizione necessaria.Non viene effettuato nessun controllo 
+  * sul contenuto dei file.
+  * 
   * appender.txt
   * logger.txt
   * rootLogger.txt
   * 
   * @param path path dove trovare i file per un dato componente software
-  * @return 0 tutto ok
-  * @return 1 almeno 1 file non è stato trovato
+  * @return 0 procedura corretta
+  * @return 1 errore, almeno 1 file non è stato trovato
   */  
 static int validaComponenteSW(String path){
      //flag restituito 
@@ -291,13 +301,11 @@ return flag;
    
 /**
  * Questo metodo compone dinamicamente il file di configurazione di log4j a partire
- * da frammenti presenti su percorsi specifici di alcuni componenti software.
+ * dai frammenti presenti su percorsi specifici dei componenti software.
  * @param vett_ok vettore contenente i path dove prendere i file dei componenti software validati
- * @param n dim fisica di vett_ok
- * @param radice path di ambiente del progetto dove reperire i frammenti presenti sulla directory /sistema 
- * presente nel componente software master
- * @return 0 nessun errore
- * @return 1 presenza di un errore
+ * @param n dim fisica del vettore vett_ok
+ * @param radice path di ambiente del progetto  
+ * @return stringa contenente il file di configurazione di log finale
  */
 static String componiConfLog(String[] vett_ok,int n,String radice){
      String Log_Finale ="";
@@ -341,9 +349,7 @@ static String componiConfLog(String[] vett_ok,int n,String radice){
  * software e li fonde in un unica stringa.
  * @param path vettore contenente i path dove prendere i file dei componenti software
  * @param n dim fisica di path
- * @param Appenders contenitore di tutti i frammenti appenders
- * @return 0 nessun errore
- * @return 1 presenza di un errore
+ * @return stringa contenente tutti i frammenti appender delle componenti presnti nel vettore path 
  */
 static String componiAppConf(String [] path,int n){
     String com1 ="",com2 ="";
@@ -369,9 +375,7 @@ static String componiAppConf(String [] path,int n){
  * software e li fonde in un unica stringa.
  * @param path vettore contenente i path dove prendere i file dei componenti software
  * @param n dim fisica di path
- * @param Loggers contenitore di tutti i frammenti logger 
- * @return 0 nessun errore
- * @return 1 presenza di un errore
+ * @return stringa contenente tutti i frammenti logger delle componenti presenti nel vettore path
  */
 static String componiLogConf(String[] path,int n){
     String com1 ="",com2 ="";
@@ -394,9 +398,7 @@ static String componiLogConf(String[] path,int n){
  * software e li fonde in un unica stringa.
  * @param path vettore contenente i path dove prendere i file dei componenti software
  * @param n dim fisica di path
- * @param RootLoggers contenitore di tutti i frammenti rootLoggers
- * @return 0 nessun errore
- * @return 1 presenza di un errore
+ * @return stringa contenente tutti i frammenti rootLogger delle componenti presenti nel vettore path
  */
 static String componirootLogConf(String[] path,int n){
     String com1 ="",com2 ="";
@@ -416,9 +418,9 @@ static String componirootLogConf(String[] path,int n){
 
 /**
  * Questa funzione serve per verificare l'esistenza di un file
- * @param path percorso del file da verificare il file
+ * @param path percorso del file da verificare 
  * @return 0 il file esiste
- * @return 1 i1 non esiste
+ * @return 1 i1 filenon esiste
  */
 static int validaFile(String path){
     int flag=0;
@@ -435,14 +437,14 @@ return flag;
 /**
  * Scrive in append il contenuto_da_appenere (stringa), dentro il file_contenitore
  * (indicato dalla stringa del suo path)
- * @param file_contenitore path del file da riempire in append
- * @param contenuto_da_appendere contenuto da mettere nel file_contenitore
+ * @param link_file_contenitore path del file da riempire in append
+ * @param contenuto_da_appendere contenuto da mettere nel link_file_contenitore
  */
-static void componiFile(String file_contenitore, String contenuto_da_appendere){
+static void componiFile(String link_file_contenitore, String contenuto_da_appendere){
    BufferedWriter bw = null;
    String file;
 try {
-    bw = new BufferedWriter(new FileWriter(file_contenitore, true));
+    bw = new BufferedWriter(new FileWriter(link_file_contenitore, true));
     
     file=fileToString(contenuto_da_appendere);
     
@@ -464,7 +466,7 @@ try {
 
 
 /**
- * Restituisce una stringa che contiene il contenuto del file indicato da path
+ * Restituisce una stringa che contiene il contenuto del file indicato col suo path
  * Funzione usata all'interno di componiFile()
  * @param path percorso del file
  * @return 
@@ -486,10 +488,11 @@ static String fileToString( String path ) throws FileNotFoundException, IOExcept
 }
 
 /**
- * Crea un nuovo file
+ * Crea un nuovo file e gli assegna text come contenuto
  * @param path dove crea il file
  * @param text testo che assegna al file
- * @return 
+ * @return 0 funzionamento regolare
+ * @return 1 errore
  */
 static int stringToFile(String path, String text){
     int flag =0;
@@ -507,8 +510,6 @@ static int stringToFile(String path, String text){
        
  return flag;
 } //strinToFile
-
-
 
 /**
  * Questo metodo crea una direcotory dato il percorso con nome
@@ -529,7 +530,7 @@ static void creaDir(String directoryName){
     }
 
 /**
- * 
+ * cancella un file
  * @param file 
  */
 static void deleteFile(String file){
@@ -539,7 +540,11 @@ static void deleteFile(String file){
     
 }//CancellaFile
 
-
+/**
+ * Cancella una direcotry, anche piena. E' ricorsiva.
+ * @param path
+ * @return 
+ */
 public static boolean deleteDirectory(File path) {
              if(path.exists()) {
               File[] files = path.listFiles();

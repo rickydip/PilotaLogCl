@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import logclass.slave.LogClass3;
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -26,7 +27,7 @@ public class LogClass {
  
     
    public static void main(String[] args) {
-   
+   int flag=0;
 //###############################################
 //Componenti software che voglio includere nel  #
 //processo di creazione dinamica del file di log#
@@ -39,24 +40,24 @@ public class LogClass {
      String path1 = radice+"master/";
      String path2 = radice+"slave1/";
      String path3 = radice+"slave2/";
-     String path4 = radice+"slave3/";
+     String path4 = radice+"slave3/";//lo aggiungo a run time
     
      //numero di componenti software da gestire nella
      //creazione dinamica del file di conf del log
-     int n=4;
+     int n=3;
      
      System.out.println("I path dei componenti software che partecipano al processo di composizione dimanica sono:");
      System.out.println(path1);
      System.out.println(path2);
      System.out.println(path3);
-     System.out.println(path4); 
+     //System.out.println(path4); 
      
      //vettore input preliminare riempito con le componenti software
      String[] vett= new String[n];
      vett[0]=path1;
      vett[1]=path2;
      vett[2]=path3;
-     vett[3]=path4;       
+     //vett[3]=path4;       
        
 //#################################       
        
@@ -84,7 +85,7 @@ public class LogClass {
          
      System.out.println("master_dinamic.xml non esiste, inizio il processo di creazione DINAMICO");
      
-     int flag=0;
+     
      //Routine di creazione
      //#######################################################
      flag=creaFileConfigurazioneLog(n,vett,log4jConfigFile,radice);
@@ -141,18 +142,58 @@ public class LogClass {
       LogClass2 b = new LogClass2();
       b.metodo();
       
+      
+      
+      //Aggiungo un componente slave a run time
+      
+      //dim del vettore con le componenti software in input al processo di creazione dinamica
+      int m=4;
+      
+     //vettore input preliminare riempito con le componenti software
+     String[] vett_new= new String[m];
+     vett_new[0]=path1;
+     vett_new[1]=path2;
+     vett_new[2]=path3;
+     vett_new[3]=path4;
+     
+     
+     System.out.println("\n\n");
+     System.out.println("Aggiungo la componente: "+path4);
+     System.out.println("Cancello il file di conf di log precedente ne creo uno aggiornato");
+     System.out.println("\n\n");
+     
+      //Routine di creazione
+     //#######################################################
+     flag=creaFileConfigurazioneLog(m,vett_new,log4jConfigFile,radice);
+     //#######################################################  
+     
+     //faccio un reset della configurazione di log4j
+     LogManager.resetConfiguration();
+      
+    //se non ci sono stati errori nel processo di creazione 
+     if(flag==0){
+         //System.out.println(log4jConfigFile);
+         DOMConfigurator.configure(log4jConfigFile);
+     }
+     
+     //########################################
+     //continuo con l'esecuzione del programma#
+     //########################################
+     
       LogClass3 c = new LogClass3();
-      c.metodo();
-      
-      
-      //CANCELLO il file di conf di log per esigenze operative 
-        deleteFile(log4jConfigFile); 
-      
-       /*
-       boolean ok;
-       File f = new File(radice +"/LOGS");
-       ok=deleteDirectory(f);
-       */
+      c.metodo(); 
+        
+       
+       //CANCELLO il file di conf di log per esigenze operative  
+        deleteFile(log4jConfigFile);  
+        
+       
+       //boolean ok;
+       //File f = new File(radice +"/LOGS");
+       //ok=deleteDirectory(f);
+    
+        
+        
    }//main
    
 

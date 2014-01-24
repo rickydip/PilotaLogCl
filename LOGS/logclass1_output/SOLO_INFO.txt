@@ -10,7 +10,3 @@
  INFO [main] (LogClass1.java:59) - Info Message! LogClass1
  INFO [main] (LogClass1.java:66) - Info Message! LogClass1
  INFO [main] (LogClass1.java:73) - Info Message! LogClass1
- INFO [main] (LogClass1.java:52) - Info Message! LogClass1
- INFO [main] (LogClass1.java:59) - Info Message! LogClass1
- INFO [main] (LogClass1.java:66) - Info Message! LogClass1
- INFO [main] (LogClass1.java:73) - Info Message! LogClass1

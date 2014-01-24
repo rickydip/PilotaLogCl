@@ -6,3 +6,11 @@
 2014-01-24 00:31:21 INFO [logclass.LogClass:116] - Info Message! LogClass
 2014-01-24 00:31:21 INFO [logclass.LogClass:123] - Info Message! LogClass
 2014-01-24 00:31:21 INFO [logclass.LogClass:130] - Info Message! LogClass
+2014-01-24 01:01:42 INFO [logclass.LogClass:110] - Info Message! LogClass
+2014-01-24 01:01:42 INFO [logclass.LogClass:117] - Info Message! LogClass
+2014-01-24 01:01:42 INFO [logclass.LogClass:124] - Info Message! LogClass
+2014-01-24 01:01:42 INFO [logclass.LogClass:131] - Info Message! LogClass
+2014-01-24 01:01:46 INFO [logclass.LogClass:110] - Info Message! LogClass
+2014-01-24 01:01:46 INFO [logclass.LogClass:117] - Info Message! LogClass
+2014-01-24 01:01:46 INFO [logclass.LogClass:124] - Info Message! LogClass
+2014-01-24 01:01:46 INFO [logclass.LogClass:131] - Info Message! LogClass

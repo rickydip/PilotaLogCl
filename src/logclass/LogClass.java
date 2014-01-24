@@ -212,7 +212,7 @@ static int creaFileConfigurazioneLog(int n, String[] vett, String log4jConfigFil
   * rispetto al processo di creazione dinamica del file di 
   * configurazione di log4j. La validazione consiste nella 
   * verifica dell'esistenza dei 3 file "frammenti" richiesti:
-  * 
+  * Non viene effettuato nessun controllo sul contenuto dei file
   * appender.txt
   * logger.txt
   * rootLogger.txt

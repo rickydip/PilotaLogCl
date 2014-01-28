@@ -1,5 +1,5 @@
 
-package logclass;
+package PilotaLogClever;
 
 
 import java.io.BufferedReader;
@@ -11,13 +11,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
-import logclass.slave.LogClass3;
+import PilotaLogClever.slave.LogClass3;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 
-public class LogClass {
+public class PilotaLogClever {
    private static org.apache.log4j.Logger log0 = Logger.getLogger("com.foo");
    private static org.apache.log4j.Logger logger0 = Logger.getLogger("com.foo.bar");
    private static org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
@@ -354,15 +354,13 @@ static String componiConfLog(String[] vett_ok,int n,String radice){
 static String componiAppConf(String [] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
-        
-            System.out.println(path[i]+"appender.xml  "+i);
         try {
+            System.out.println(path[i]+"appender.xml  "+i);
             com1=fileToString(path[i]+"appender.xml");
-        } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(LogClass.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            //System.out.println(com1);
             com2=com2+com1;
+        } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(PilotaLogClever.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
     }
  
@@ -385,7 +383,7 @@ static String componiLogConf(String[] path,int n){
             com1=fileToString(path[i]+"logger.xml");
             com2=com2+com1;
         } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(LogClass.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PilotaLogClever.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
     
@@ -408,7 +406,7 @@ static String componirootLogConf(String[] path,int n){
             com1=fileToString(path[i]+"rootLogger.xml");
             com2=com2+com1;
         } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(LogClass.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PilotaLogClever.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
  
@@ -502,7 +500,7 @@ static int stringToFile(String path, String text){
            out.println(text);
        } //try
        catch (FileNotFoundException ex) {
-           java.util.logging.Logger.getLogger(LogClass.class.getName()).log(Level.SEVERE, null, ex);
+           java.util.logging.Logger.getLogger(PilotaLogClever.class.getName()).log(Level.SEVERE, null, ex);
            flag=1;
        } finally {
            out.close();

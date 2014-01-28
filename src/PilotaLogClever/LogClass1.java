@@ -5,7 +5,7 @@ all'interno del path del file di configurazione
 
 
 
-package logclass;
+package PilotaLogClever;
 
 import java.io.File;
 import org.apache.log4j.Logger;

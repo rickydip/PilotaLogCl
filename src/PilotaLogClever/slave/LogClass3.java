@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package logclass.slave;
+package PilotaLogClever.slave;
 import java.io.File;
 import org.apache.log4j.Logger;
 

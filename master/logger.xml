@@ -1,10 +1,10 @@
-<logger name="com.foo" additivity="false">
+<logger name="com_foo" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
         <appender-ref ref="FILE9" />
 </logger>
- <logger name="com.foo.bar" additivity="false">
+ <logger name="com_foo_bar" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />

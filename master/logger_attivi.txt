@@ -1,0 +1,2 @@
+log logger com_foo_bar com_foo
+

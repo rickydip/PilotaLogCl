@@ -13,6 +13,9 @@ import java.io.PrintWriter;
 import java.util.logging.Level;
 import PilotaLogClever.slave.LogClass3;
 import static java.lang.System.exit;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -20,8 +23,8 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 public class PilotaLogClever {
     //logger del componenete software master 
-   private static org.apache.log4j.Logger log0 = Logger.getLogger("com.foo");
-   private static org.apache.log4j.Logger logger0 = Logger.getLogger("com.foo.bar");
+   private static org.apache.log4j.Logger log0 = Logger.getLogger("com_foo");
+   private static org.apache.log4j.Logger logger0 = Logger.getLogger("com_foo_bar");
    private static org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
    private static org.apache.log4j.Logger Log0 = Logger.getLogger("log");
    
@@ -394,6 +397,27 @@ static String assegnaFrammento(String componente_sw, int n_fram){
     flag=stringToFile(output+"appender.xml",text_appender);
     if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file appender.xml!!!");}
     //##########################################
+    //bisogna valutare il numero di logger presenti sul file
+       
+        
+           // apro il file che contiene i nomi dei logger
+           ArrayList lista = new ArrayList();
+           String file = null;
+       try {
+           file = fileToString(componente_sw+"/logger_attivi.txt");
+       } catch (IOException ex) {
+           java.util.logging.Logger.getLogger(PilotaLogClever.class.getName()).log(Level.SEVERE, null, ex);
+       }
+           lista = stringToArrayList(file);
+           System.out.println("il file contiene logger n°: "+lista.size());
+           
+           // conta parole -> vettore di logger
+           // uso questi componenti per logger e root logger
+       
+    
+    
+    
+    
     //creo il contenuto di appender.xml
     String text_logger =" <!-- Logger default --> "; 
     //creo il file
@@ -408,8 +432,7 @@ static String assegnaFrammento(String componente_sw, int n_fram){
     //##########################################
     
  return output;    
-}//assegna frammento
-
+}
 
 
 /**
@@ -526,7 +549,6 @@ static String componirootLogConf(String[] path,int n){
  return com2;   
 }//componirootLogConf
 
-
 /**
  * Questa funzione "Attualmente" serve per verificare l'esistenza di un file
  * @param path percorso del file da verificare 
@@ -574,7 +596,6 @@ try {
     }
 }
 }//componiFile
-
 
 /**
  * Restituisce una stringa che contiene il contenuto del file indicato col suo path
@@ -671,7 +692,6 @@ public static boolean deleteDirectory(File path) {
       return(path.delete());
 }
 
-
 /**
  * Cancella una direcotry, anche piena. E' ricorsiva.
  * @param path
@@ -695,10 +715,12 @@ public static void deleteDir(String path) {
       
 }
 
-
-
-
-
+public static ArrayList stringToArrayList (String stringa){
+     //imposto il separatore
+     String[] strValues = stringa.split(" "); 
+     ArrayList<String> lista = new ArrayList<String>(Arrays.asList(strValues));
+     return lista;
+}
 
 
 }//class

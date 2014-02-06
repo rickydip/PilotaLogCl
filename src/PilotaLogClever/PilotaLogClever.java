@@ -12,39 +12,52 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import PilotaLogClever.slave.LogClass3;
+import static java.lang.System.exit;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 
 public class PilotaLogClever {
+    //logger del componenete software master 
    private static org.apache.log4j.Logger log0 = Logger.getLogger("com.foo");
    private static org.apache.log4j.Logger logger0 = Logger.getLogger("com.foo.bar");
    private static org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
    private static org.apache.log4j.Logger Log0 = Logger.getLogger("log");
+   
+   //path del progetto  
+   private static String radice = System.getProperty("user.dir")
+                + File.separator;
+   
+   
+   //###############################################
+//Componenti software che voglio includere nel  #
+//processo di creazione dinamica del file di log#
+//###############################################     
+     
+   static String path1 = radice+"master/";
+   static String path2 = radice+"slave1/";
+   static String path3 = radice+"slave2/";
+   static String path4 = radice+"slave3/";//lo aggiungo a run time
+   
+   
+   //contiene i frammenti di default da aggiungere per validare un componente
+   //che altrimenti non può essere validato
+   private static String path5 = radice+"frammenti_default/";
     
    
  
     
    public static void main(String[] args) {
+       //Pulisco la dir dei log di precedenti iterazioni
+       deleteDir(radice+"/LOGS/");
+       
+       
    int flag=0;
-//###############################################
-//Componenti software che voglio includere nel  #
-//processo di creazione dinamica del file di log#
-//###############################################     
-     
-     //path del progetto  
-     String radice = System.getProperty("user.dir")
-                + File.separator;
-     
-     String path1 = radice+"master/";
-     String path2 = radice+"slave1/";
-     String path3 = radice+"slave2/";
-     String path4 = radice+"slave3/";//lo aggiungo a run time
-    
-     //numero di componenti software da gestire nella
-     //creazione dinamica del file di conf del log
-     int n=3;
+   
+   //numero di componenti software da gestire nella
+   //creazione dinamica del file di conf del log
+   int n=3;
      
      System.out.println("I path dei componenti software che partecipano al processo di composizione dimanica sono:");
      System.out.println(path1);
@@ -188,9 +201,7 @@ public class PilotaLogClever {
         deleteFile(log4jConfigFile);  
         
        
-       //boolean ok;
-       //File f = new File(radice +"/LOGS");
-       //ok=deleteDirectory(f);
+       
     
         
         
@@ -216,9 +227,10 @@ static int creaFileConfigurazioneLog(int n, String[] vett, String log4jConfigFil
      int flag=0;
      int j=0;//dim del vettore validato
      
-     for(int i=0; i<n;i++){
-         flag=validaComponenteSW(vett[i]);
+     for(int i=0;i<n;i++){
+         flag=validaComponenteSW_V2(vett[i]);
          if(flag==0){vett_validato[j]=vett[i];j++;}
+         if(flag==1){vett_validato[j]=assegnaFrammento(vett[i],i);j++;}
      flag=0;
      }//
      
@@ -299,6 +311,107 @@ static int validaComponenteSW(String path){
 return flag;
 }//validaPath   
    
+/** Versione 2
+ * All interno di questa funzione se un componente software 
+ * non ha tutti i requisiti deve avviare un meccanismo che prevede
+ * a adoperare dei frammenti di default, in modo tale che nessun 
+ * componente software venga estromesso dal processo di creazione 
+ * dinamico del file di configurazione di log4j
+ * 
+ * ###################################################
+  * Questa funzione serve per validare un componente software 
+  * rispetto al processo di creazione dinamica del file di 
+  * configurazione di log4j. La "validazione" consiste nella 
+  * verifica dell'esistenza dei 3 file "frammenti" richiesti come 
+  * condizione necessaria.Non viene effettuato nessun controllo 
+  * sul contenuto dei file.
+  * 
+  * appender.txt
+  * logger.txt
+  * rootLogger.txt
+  * 
+  * @param path path dove trovare i file per un dato componente software
+  * @return 0 procedura corretta
+  * @return 1 errore, almeno 1 file non è stato trovato
+  */  
+static int validaComponenteSW_V2(String path){
+     //flag restituito
+     int flag =0;
+     //##################################
+     //Verificare esistenza appender.xml#
+     //##################################
+     String appender=path+"/appender.xml";
+     //apro il file 
+     flag=validaFile(appender);
+     //################################
+     //Verificare esistenza logger.xml#
+     //################################
+     if(flag==0){
+     String logger=path+"/logger.xml";
+     flag=validaFile(logger);
+     }
+     //####################################
+     //Verificare esistenza rootLogger.xml#
+     //####################################
+     if(flag==0 ){
+     String rootLogger=path+"/rootLogger.xml";
+     //apro il file 
+      flag=validaFile(rootLogger);
+     }
+     
+          
+return flag;
+}//validaPath   
+
+
+/**
+ * 
+ * @param componente_sw non validato
+ * @return 
+ */
+static String assegnaFrammento(String componente_sw, int n_fram){
+    String output="";  int flag=0; String nome_app="nome";
+    //creo il nuovo path
+    output=componente_sw+"frammento_default/";
+    //se già esiste la cancello
+    deleteDir(output);
+    //creo la directory
+    creaDir(output);
+    //##########################################
+    //creo il contenuto di appender.xml
+    String text_appender ="<appender name=\""+nome_app+n_fram+"\" class=\"org.apache.log4j.FileAppender\">\n" +
+"   <param name=\"file\" value=\""+radice+"/LOGS/logclass"+n_fram+"_output/LOG.txt"+"\"/>\n" +
+"   <layout class=\"org.apache.log4j.PatternLayout\" >\n" +
+"     <param name=\"ConversionPattern\" value=\"%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n\"/>     \n" +
+"   </layout>\n" +
+"   <filter class=\"org.apache.log4j.varia.LevelMatchFilter\">\n" +
+"      <param name=\"LevelToMatch\" value=\"INFO\" />\n" +
+"      <param name=\"AcceptOnMatch\" value=\"true\" />\n" +
+"    </filter>\n" +
+"    <filter class=\"org.apache.log4j.varia.DenyAllFilter\" /> \n" +
+"</appender>";
+    //creo il file
+    flag=stringToFile(output+"appender.xml",text_appender);
+    if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file appender.xml!!!");}
+    //##########################################
+    //creo il contenuto di appender.xml
+    String text_logger =" <!-- Logger default --> "; 
+    //creo il file
+    flag=stringToFile(output+"logger.xml",text_logger);
+    if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file logger.xml!!!");}
+    //##########################################
+    //creo il contenuto di appender.xml
+    String text_rlogger = " <appender-ref ref=\""+nome_app+n_fram+"\"/>";
+    //creo il file
+    flag=stringToFile(output+"rootLogger.xml",text_rlogger);
+    if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file rootLogger.xml!!!");}
+    //##########################################
+    
+ return output;    
+}//assegna frammento
+
+
+
 /**
  * Questo metodo compone dinamicamente il file di configurazione di log4j a partire
  * dai frammenti presenti su percorsi specifici dei componenti software.
@@ -320,8 +433,8 @@ static String componiConfLog(String[] vett_ok,int n,String radice){
      
     TESTA_configuration = TESTA_configuration.trim().replaceFirst("^([\\W]+)<","<");
     CODA_configuration = CODA_configuration.trim().replaceFirst("^([\\W]+)<","<"); 
-    TESTA_rootLogger.trim().replaceFirst("^([\\W]+)<","<");  
-    CODA_rootLogger.trim().replaceFirst("^([\\W]+)<","<");  
+   // TESTA_rootLogger.trim().replaceFirst("^([\\W]+)<","<");  
+   // CODA_rootLogger.trim().replaceFirst("^([\\W]+)<","<");  
      
      //stringhe di comodo 
      String Appenders ="";
@@ -415,7 +528,7 @@ static String componirootLogConf(String[] path,int n){
 
 
 /**
- * Questa funzione serve per verificare l'esistenza di un file
+ * Questa funzione "Attualmente" serve per verificare l'esistenza di un file
  * @param path percorso del file da verificare 
  * @return 0 il file esiste
  * @return 1 i1 filenon esiste
@@ -557,6 +670,36 @@ public static boolean deleteDirectory(File path) {
       }
       return(path.delete());
 }
+
+
+/**
+ * Cancella una direcotry, anche piena. E' ricorsiva.
+ * @param path
+ * @return 
+ */
+public static void deleteDir(String path) {
+    
+    File file = new File(path);
+      
+             if(file .exists()) {
+              File[] files = file.listFiles();
+              for(int i=0; i<files.length; i++) {
+                    if(files[i].isDirectory()) {
+                        deleteDirectory(files[i]);
+                    }
+                    else {
+                        files[i].delete();
+                    }
+              }
+      }
+      
+}
+
+
+
+
+
+
 
 }//class
 

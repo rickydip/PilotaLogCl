@@ -1,5 +1,5 @@
-2014-02-07 15:25:05 DEBUG [PilotaLogClever.slave.LogClass3:47] - Debug Message! LogClass3
-2014-02-07 15:25:05 INFO [PilotaLogClever.slave.LogClass3:48] - Info Message! LogClass3
-2014-02-07 15:25:05 WARN [PilotaLogClever.slave.LogClass3:49] - Warn Message! LogClass3
-2014-02-07 15:25:05 ERROR [PilotaLogClever.slave.LogClass3:50] - Error Message! LogClass3
-2014-02-07 15:25:05 FATAL [PilotaLogClever.slave.LogClass3:51] - Fatal Message! LogClass3
+2014-02-07 16:59:32 DEBUG [PilotaLogClever.slave.LogClass3:47] - Debug Message! LogClass3
+2014-02-07 16:59:32 INFO [PilotaLogClever.slave.LogClass3:48] - Info Message! LogClass3
+2014-02-07 16:59:32 WARN [PilotaLogClever.slave.LogClass3:49] - Warn Message! LogClass3
+2014-02-07 16:59:32 ERROR [PilotaLogClever.slave.LogClass3:50] - Error Message! LogClass3
+2014-02-07 16:59:32 FATAL [PilotaLogClever.slave.LogClass3:51] - Fatal Message! LogClass3

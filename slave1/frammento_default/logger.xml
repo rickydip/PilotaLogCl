@@ -1,1 +1,21 @@
- <!-- Logger default --> 
+<logger name="pippo" additivity="false">
+<level value="debug"/>
+<appender-ref ref="nome1" />
+</logger>
+
+<logger name="pluto" additivity="false">
+<level value="debug"/>
+<appender-ref ref="nome1" />
+</logger>
+
+<logger name="paperino" additivity="false">
+<level value="debug"/>
+<appender-ref ref="nome1" />
+</logger>
+
+<logger name="paperina" additivity="false">
+<level value="debug"/>
+<appender-ref ref="nome1" />
+</logger>
+
+

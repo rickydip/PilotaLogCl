@@ -27,13 +27,21 @@ public class PilotaLogClever {
    private static org.apache.log4j.Logger logger0 = Logger.getLogger("com_foo_bar");
    private static org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
    private static org.apache.log4j.Logger Log0 = Logger.getLogger("log");
+ 
    
-   //path del progetto  
-   private static String radice = System.getProperty("user.dir")
+ //#######   A  #########
+ 
+//path del progetto  
+ private static String radice = System.getProperty("user.dir")
                 + File.separator;
+ 
+ //#######   B  #########
+ 
+ //dichiaro il path del file di configurazione di log4j   
+ private static String log4jConfigFile = System.getProperty("user.dir")
+                + File.separator + "master_dinamic.xml";  
    
-   
-   //###############################################
+//#######   c  #########   
 //Componenti software che voglio includere nel  #
 //processo di creazione dinamica del file di log#
 //###############################################     
@@ -43,19 +51,21 @@ public class PilotaLogClever {
    static String path3 = radice+"slave2/";
    static String path4 = radice+"slave3/";//lo aggiungo a run time
    
-   
-   //contiene i frammenti di default da aggiungere per validare un componente
-   //che altrimenti non può essere validato
-   private static String path5 = radice+"frammenti_default/";
     
-   
+  
  
-    
+   /**
+    * MAIN che diventerà il contenuto dellAgent di Clever
+    * @param args 
+    */ 
    public static void main(String[] args) {
        //Pulisco la dir dei log di precedenti iterazioni
        deleteDir(radice+"/LOGS/");
+       //Pulisco il file di conf di log4j di precedenti iterazioni  
+       deleteFile(log4jConfigFile);
        
-       
+        
+        
    int flag=0;
    
    //numero di componenti software da gestire nella
@@ -77,46 +87,36 @@ public class PilotaLogClever {
        
 //#################################       
        
-//dichiaro il path del file di configurazione di log4j   
- String log4jConfigFile = System.getProperty("user.dir")
-                + File.separator + "master_dinamic.xml";    
+   
        
-     //effettuo un controllo sulla sua esistanza  
+     //Controllo se esiste il file di configurazione di log4j
      File  file =new File(log4jConfigFile);
-     
-    
      boolean existsFile = file.isFile();
-     
-     
+          
      /*
-     //se esiste
+     //SE ESISTE
      if(existsFile){
          System.out.println("Il file di configurazione master_dinamic esiste, non lo creo, la simulazione prosegue normalmente.");  
          DOMConfigurator.configure(log4jConfigFile);
      }
      */
      
-     //se non esiste lo creo
+     //SE NON ESISTE VIENE AVVIATO IL PROCESSO DI CREAZIONE
      if (!existsFile) {
+         //debug
+         System.out.println("master_dinamic.xml non esiste, inizio il processo di creazione DINAMICO");
          
-     System.out.println("master_dinamic.xml non esiste, inizio il processo di creazione DINAMICO");
-     
-     
-     //Routine di creazione
+     //AVVIO ROUTINE DI CREAZIONE
      //#######################################################
      flag=creaFileConfigurazioneLog(n,vett,log4jConfigFile,radice);
      //#######################################################
-     
-     if(flag==0){
-         //System.out.println(log4jConfigFile);
-         DOMConfigurator.configure(log4jConfigFile);
-     
-        
-     
-     }//if
+     //ASSEGNO IL FILE CREATO A LOG4J
+     if(flag==0){assegnaConfToLog4j();}
      }//!existsFile
      
-          
+
+     
+     
      
       //#################################
       //esecuzione del programma master##
@@ -150,17 +150,16 @@ public class PilotaLogClever {
       Log0.error("Error Message! LogClass");
       Log0.fatal("Fatal Message! LogClass");
       
-     
+      //avvio l esecuzione dei logger degli slave
       LogClass1 a = new LogClass1();
       a.metodo();
       
-          
       LogClass2 b = new LogClass2();
       b.metodo();
       
       
-      
       //Aggiungo un componente slave a run time
+      
       
       //dim del vettore con le componenti software in input al processo di creazione dinamica
       int m=4;
@@ -178,30 +177,25 @@ public class PilotaLogClever {
      System.out.println("Cancello il file di conf di log precedente ne creo uno aggiornato");
      System.out.println("\n\n");
      
-      //Routine di creazione
+     //AVVIO ROUTINE DI CREAZIONE
      //#######################################################
      flag=creaFileConfigurazioneLog(m,vett_new,log4jConfigFile,radice);
      //#######################################################  
      
-     //faccio un reset della configurazione di log4j
-     LogManager.resetConfiguration();
-      
-    //se non ci sono stati errori nel processo di creazione 
-     if(flag==0){
-         //System.out.println(log4jConfigFile);
-         DOMConfigurator.configure(log4jConfigFile);
-     }
+           
+    ////ASSEGNO IL FILE CREATO A LOG4J
+     if(flag==0){assegnaConfToLog4j();}
      
      //########################################
      //continuo con l'esecuzione del programma#
      //########################################
      
+     //avvio l esecuzione dei logger degli slave
       LogClass3 c = new LogClass3();
       c.metodo(); 
         
        
-       //CANCELLO il file di conf di log per esigenze operative  
-        deleteFile(log4jConfigFile);  
+         
         
        
        
@@ -370,6 +364,7 @@ return flag;
 /**
  * 
  * @param componente_sw non validato
+ * @param n_fram
  * @return 
  */
 static String assegnaFrammento(String componente_sw, int n_fram){
@@ -409,8 +404,8 @@ static String assegnaFrammento(String componente_sw, int n_fram){
            java.util.logging.Logger.getLogger(PilotaLogClever.class.getName()).log(Level.SEVERE, null, ex);
        }
            lista = stringToArrayList(file);
-           System.out.println("il file contiene logger n°: "+lista.size());
-           
+           System.out.println("il file contiene logger n°: "+lista.size()+"\n\n");
+           System.out.println(lista);
            // conta parole -> vettore di logger
            // uso questi componenti per logger e root logger
        
@@ -419,10 +414,23 @@ static String assegnaFrammento(String componente_sw, int n_fram){
     
     
     //creo il contenuto di appender.xml
-    String text_logger =" <!-- Logger default --> "; 
+    String text_logger =""; 
+    String comodo="";
+    
+    for(int i=0;i<lista.size();i++){
+        
+        comodo = "<logger name=\""+lista.get(i)+"\" additivity=\"false\">\n<level value=\"debug\"/>\n";
+        text_logger= text_logger+ comodo+"<appender-ref ref=\""+nome_app+n_fram+"\" />\n</logger>\n\n";
+        
+    }//for
+    
+    //debug
+    //System.out.println(text_logger);
+        
     //creo il file
     flag=stringToFile(output+"logger.xml",text_logger);
     if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file logger.xml!!!");}
+    
     //##########################################
     //creo il contenuto di appender.xml
     String text_rlogger = " <appender-ref ref=\""+nome_app+n_fram+"\"/>";
@@ -433,7 +441,6 @@ static String assegnaFrammento(String componente_sw, int n_fram){
     
  return output;    
 }
-
 
 /**
  * Questo metodo compone dinamicamente il file di configurazione di log4j a partire
@@ -565,11 +572,11 @@ static int validaFile(String path){
      System.out.println("Il file: "+path+" non esiste!!!");
      }
 return flag;
-}
+}//validaFile
 
 /**
  * Scrive in append il contenuto_da_appenere (stringa), dentro il file_contenitore
- * (indicato dalla stringa del suo path)
+ * (indicato col suo path)
  * @param link_file_contenitore path del file da riempire in append
  * @param contenuto_da_appendere contenuto da mettere nel link_file_contenitore
  */
@@ -620,7 +627,7 @@ static String fileToString( String path ) throws FileNotFoundException, IOExcept
 }
 
 /**
- * Crea un nuovo file e gli assegna text come contenuto
+ * Crea un nuovo file al path definito e gli assegna text come contenuto
  * @param path dove crea il file
  * @param text testo che assegna al file
  * @return 0 funzionamento regolare
@@ -658,8 +665,8 @@ static void creaDir(String directoryName){
      if(result) {    
        System.out.println("DIR created");  
      }
-  }
-    }
+   }
+}//creaDir
 
 /**
  * cancella un file
@@ -670,7 +677,7 @@ static void deleteFile(String file){
     File f = new File(file);
     f.delete();
     
-}//CancellaFile
+}//deleteFile
 
 /**
  * Cancella una direcotry, anche piena. E' ricorsiva.
@@ -690,11 +697,11 @@ public static boolean deleteDirectory(File path) {
               }
       }
       return(path.delete());
-}
+}//deleteDirectory
 
 /**
- * Cancella una direcotry, anche piena. E' ricorsiva.
- * @param path
+ * Cancella una directory, anche piena. E' ricorsiva.
+ * @param path percorso della directory
  * @return 
  */
 public static void deleteDir(String path) {
@@ -713,15 +720,35 @@ public static void deleteDir(String path) {
               }
       }
       
-}
+}//deleteDir
 
+/**
+ * Questo metodo trasforma una stringa di testo in un array list, dove ciscun 
+ * campo è una parola della stringa
+ * @param stringa
+ * @return 
+ */
 public static ArrayList stringToArrayList (String stringa){
      //imposto il separatore
      String[] strValues = stringa.split(" "); 
+     
+     //ad ogni elemento del vettore levo lo spazio prima e dopo del contenuto
+     for(int i=0; i<strValues.length; i++) {
+      strValues[i]=strValues[i].trim();
+      }
+     
      ArrayList<String> lista = new ArrayList<String>(Arrays.asList(strValues));
      return lista;
-}
+}// stringToArrayList
 
+public static void assegnaConfToLog4j(){
+     //faccio un reset di eventuali precedenti configurazione log4j
+     LogManager.resetConfiguration();
+     //setto il file di configurazione in log4j
+     DOMConfigurator.configure(log4jConfigFile);    
+    
+    
+}//assegnaConfToLog4j
 
 }//class
 

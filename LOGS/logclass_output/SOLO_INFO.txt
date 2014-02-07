@@ -1,4 +1,4 @@
-2014-02-07 18:03:17 INFO [PilotaLogClever.PilotaLogClever:171] - Info Message! LogClass
-2014-02-07 18:03:17 INFO [PilotaLogClever.PilotaLogClever:178] - Info Message! LogClass
-2014-02-07 18:03:17 INFO [PilotaLogClever.PilotaLogClever:185] - Info Message! LogClass
-2014-02-07 18:03:17 INFO [PilotaLogClever.PilotaLogClever:192] - Info Message! LogClass
+2014-02-07 18:21:39 INFO [PilotaLogClever.PilotaLogClever:156] - Info Message! LogClass
+2014-02-07 18:21:39 INFO [PilotaLogClever.PilotaLogClever:163] - Info Message! LogClass
+2014-02-07 18:21:39 INFO [PilotaLogClever.PilotaLogClever:170] - Info Message! LogClass
+2014-02-07 18:21:39 INFO [PilotaLogClever.PilotaLogClever:177] - Info Message! LogClass

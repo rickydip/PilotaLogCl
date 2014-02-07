@@ -82,22 +82,7 @@ public class PilotaLogClever {
    
     
        
-     //Controllo se esiste il file di configurazione di log4j
-     File  file =new File(log4jConfigFile);
-     boolean existsFile = file.isFile();
-          
-     /*
-     //SE ESISTE
-     if(existsFile){
-         System.out.println("Il file di configurazione master_dinamic esiste, non lo creo, la simulazione prosegue normalmente.");  
-         DOMConfigurator.configure(log4jConfigFile);
-     }
-     */
      
-     //SE NON ESISTE VIENE AVVIATO IL PROCESSO DI CREAZIONE
-     if (!existsFile) {
-         //debug
-         System.out.println("master_dinamic.xml non esiste, inizio il processo di creazione DINAMICO");
          
      //AVVIO ROUTINE DI CREAZIONE
      //#######################################
@@ -105,13 +90,12 @@ public class PilotaLogClever {
      //#######################################
      //ASSEGNO IL FILE CREATO A LOG4J
      if(flag==0){log.assegnaConfToLog4j();}
-     }//!existsFile
+    
      
 
      AvviaEsecuzionePilota();
            
-      
-      
+          
      //AGGIUNGO UN  COMPONENTE A RUN TIME
       
      //dim del vettore con le componenti software in input al processo di creazione dinamica
@@ -124,13 +108,15 @@ public class PilotaLogClever {
      vett_new[2]=path3;
      vett_new[3]=path4;
      
-     
+     //debug
      System.out.println("\n\n");
      System.out.println("Aggiungo la componente: "+path4);
      System.out.println("Cancello il file di conf di log precedente e ne creo uno aggiornato");
      System.out.println("\n\n");
      
      
+     
+     //aggiorno l oggetto entro cui si svolgono tutte le operazioni
      log = new LOG(radice,log4jConfigFile,vett_new,m);
      
      //AVVIO ROUTINE DI CREAZIONE
@@ -142,19 +128,18 @@ public class PilotaLogClever {
      if(flag==0){log.assegnaConfToLog4j();}
      
      
-     //########################################
-     //continuo con l'esecuzione del programma#
-     //########################################
-     
-     //avvio l esecuzione dei logger degli slave
-      LogClass3 c = new LogClass3();
-      c.metodo(); 
-        
+     //continuo con l'esecuzione del programma
+     AvvioSlave3();   
        
         
    }//main
    
-static void AvviaEsecuzionePilota(){
+
+   /**
+    * contiene comandi per simulare la presenza di 3 componenti software:
+    * il master e 2 slave
+    */
+   static void AvviaEsecuzionePilota(){
     //logger del componenete software master 
     org.apache.log4j.Logger log0 = Logger.getLogger("com_foo");
     org.apache.log4j.Logger logger0 = Logger.getLogger("com_foo_bar");
@@ -203,7 +188,20 @@ static void AvviaEsecuzionePilota(){
       
     
 }   
-   
+ 
+/**
+ * simula l aggiunta si uno slave3 a run time
+ */
+static void AvvioSlave3(){
+   //avvio l esecuzione dei logger degli slave
+      LogClass3 c = new LogClass3();
+      c.metodo();  
+    
+}
+
+
+
+
 
 }//class
 

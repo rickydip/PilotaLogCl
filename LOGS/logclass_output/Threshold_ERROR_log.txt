@@ -1,8 +1,8 @@
-ERROR [main] (PilotaLogClever.java:135) - Error Message! LogClass
-FATAL [main] (PilotaLogClever.java:136) - Fatal Message! LogClass
-ERROR [main] (PilotaLogClever.java:142) - Error Message! LogClass
-FATAL [main] (PilotaLogClever.java:143) - Fatal Message! LogClass
-ERROR [main] (PilotaLogClever.java:149) - Error Message! LogClass
-FATAL [main] (PilotaLogClever.java:150) - Fatal Message! LogClass
-ERROR [main] (PilotaLogClever.java:156) - Error Message! LogClass
-FATAL [main] (PilotaLogClever.java:157) - Fatal Message! LogClass
+ERROR [main] (PilotaLogClever.java:173) - Error Message! LogClass
+FATAL [main] (PilotaLogClever.java:174) - Fatal Message! LogClass
+ERROR [main] (PilotaLogClever.java:180) - Error Message! LogClass
+FATAL [main] (PilotaLogClever.java:181) - Fatal Message! LogClass
+ERROR [main] (PilotaLogClever.java:187) - Error Message! LogClass
+FATAL [main] (PilotaLogClever.java:188) - Fatal Message! LogClass
+ERROR [main] (PilotaLogClever.java:194) - Error Message! LogClass
+FATAL [main] (PilotaLogClever.java:195) - Fatal Message! LogClass

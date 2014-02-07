@@ -584,6 +584,9 @@ public ArrayList stringToArrayList (String stringa){
      return lista;
 }// stringToArrayList
 
+/**
+ * Metodo che aggiorna la configurazione di log4j
+ */
 public void assegnaConfToLog4j(){
      //faccio un reset di eventuali precedenti configurazione log4j
      LogManager.resetConfiguration();

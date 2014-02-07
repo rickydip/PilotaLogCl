@@ -25,13 +25,7 @@ import componentiLogger.LOG;
 
 
 public class PilotaLogClever {
-    //logger del componenete software master 
-   private static org.apache.log4j.Logger log0 = Logger.getLogger("com_foo");
-   private static org.apache.log4j.Logger logger0 = Logger.getLogger("com_foo_bar");
-   private static org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
-   private static org.apache.log4j.Logger Log0 = Logger.getLogger("log");
- 
-   
+    
 
 
 
@@ -43,24 +37,24 @@ public class PilotaLogClever {
     */ 
    public static void main(String[] args) {
        
+//############ INPUT: ###########################
        
-       
-//#######   A  #########
+//   A  
  
 //path del progetto  
  String radice = System.getProperty("user.dir")
                 + File.separator;
  
- //#######   B  #########
+ //  B  
  
  //dichiaro il path del file di configurazione di log4j   
  String log4jConfigFile = System.getProperty("user.dir")
                 + File.separator + "master_dinamic.xml";  
    
-//#######   c  #########   
-//Componenti software che voglio includere nel  #
-//processo di creazione dinamica del file di log#
-//###############################################     
+//   C  
+//Componenti software che voglio includere nel  
+//processo di creazione dinamica del file di log
+   
      
    String path1 = radice+"master/";
    String path2 = radice+"slave1/";
@@ -71,29 +65,22 @@ public class PilotaLogClever {
    int n = 3;
    String[] vett= {path1,path2,path3};
         
-       
-       
-       
-       
-       
-       
-       LOG log = new LOG(radice,log4jConfigFile,vett,n);
+//#######################################################    
+     
+      
+    LOG log = new LOG(radice,log4jConfigFile,vett,n);
 
-       
-       
-       //Pulisco la dir dei log di precedenti iterazioni
-       log.deleteDir(radice+"/LOGS/");
-       //Pulisco il file di conf di log4j di precedenti iterazioni  
-       log.deleteFile(log4jConfigFile);
+    
+    //Pulisco la dir dei log di precedenti iterazioni
+    log.deleteDir(radice+"/LOGS/");
+    //Pulisco il file di conf di log4j di precedenti iterazioni  
+    log.deleteFile(log4jConfigFile);
        
         
         
    int flag=0;
    
-   //numero di componenti software da gestire nella
-   //creazione dinamica del file di conf del log
-          
-   
+    
        
      //Controllo se esiste il file di configurazione di log4j
      File  file =new File(log4jConfigFile);
@@ -113,18 +100,69 @@ public class PilotaLogClever {
          System.out.println("master_dinamic.xml non esiste, inizio il processo di creazione DINAMICO");
          
      //AVVIO ROUTINE DI CREAZIONE
-     //#######################################################
-         flag=log.creaFileConfigurazioneLog();
-     //#######################################################
+     //#######################################
+      flag=log.creaFileConfigurazioneLog();//#
+     //#######################################
      //ASSEGNO IL FILE CREATO A LOG4J
      if(flag==0){log.assegnaConfToLog4j();}
      }//!existsFile
      
 
+     AvviaEsecuzionePilota();
+           
+      
+      
+     //AGGIUNGO UN  COMPONENTE A RUN TIME
+      
+     //dim del vettore con le componenti software in input al processo di creazione dinamica
+     int m=4;
+      
+     //vettore input preliminare riempito con le componenti software
+     String[] vett_new= new String[m];
+     vett_new[0]=path1;
+     vett_new[1]=path2;
+     vett_new[2]=path3;
+     vett_new[3]=path4;
      
      
+     System.out.println("\n\n");
+     System.out.println("Aggiungo la componente: "+path4);
+     System.out.println("Cancello il file di conf di log precedente e ne creo uno aggiornato");
+     System.out.println("\n\n");
      
-      //#################################
+     
+     log = new LOG(radice,log4jConfigFile,vett_new,m);
+     
+     //AVVIO ROUTINE DI CREAZIONE
+     //####################################
+     flag=log.creaFileConfigurazioneLog();
+     //####################################  
+     
+     //ASSEGNO IL FILE CREATO A LOG4J
+     if(flag==0){log.assegnaConfToLog4j();}
+     
+     
+     //########################################
+     //continuo con l'esecuzione del programma#
+     //########################################
+     
+     //avvio l esecuzione dei logger degli slave
+      LogClass3 c = new LogClass3();
+      c.metodo(); 
+        
+       
+        
+   }//main
+   
+static void AvviaEsecuzionePilota(){
+    //logger del componenete software master 
+    org.apache.log4j.Logger log0 = Logger.getLogger("com_foo");
+    org.apache.log4j.Logger logger0 = Logger.getLogger("com_foo_bar");
+    org.apache.log4j.Logger Logger0 = Logger.getLogger("logger");
+    org.apache.log4j.Logger Log0 = Logger.getLogger("log");
+    
+    
+    //#################################
       //esecuzione del programma master##
       //#################################
      
@@ -155,7 +193,7 @@ public class PilotaLogClever {
       Log0.warn("Warn Message! LogClass");
       Log0.error("Error Message! LogClass");
       Log0.fatal("Fatal Message! LogClass");
-      
+   
       //avvio l esecuzione dei logger degli slave
       LogClass1 a = new LogClass1();
       a.metodo();
@@ -163,54 +201,8 @@ public class PilotaLogClever {
       LogClass2 b = new LogClass2();
       b.metodo();
       
-      
-      //Aggiungo un componente slave a run time
-      
-      
-      //dim del vettore con le componenti software in input al processo di creazione dinamica
-      int m=4;
-      
-     //vettore input preliminare riempito con le componenti software
-     String[] vett_new= new String[m];
-     vett_new[0]=path1;
-     vett_new[1]=path2;
-     vett_new[2]=path3;
-     vett_new[3]=path4;
-     
-     
-     System.out.println("\n\n");
-     System.out.println("Aggiungo la componente: "+path4);
-     System.out.println("Cancello il file di conf di log precedente ne creo uno aggiornato");
-     System.out.println("\n\n");
-     
-     log = new LOG(radice,log4jConfigFile,vett_new,m);
-     
-     //AVVIO ROUTINE DI CREAZIONE
-     //#######################################################
-     flag=log.creaFileConfigurazioneLog();
-     //#######################################################  
-     
-           
-    ////ASSEGNO IL FILE CREATO A LOG4J
-     if(flag==0){log.assegnaConfToLog4j();}
-     
-     //########################################
-     //continuo con l'esecuzione del programma#
-     //########################################
-     
-     //avvio l esecuzione dei logger degli slave
-      LogClass3 c = new LogClass3();
-      c.metodo(); 
-        
-       
-         
-        
-       
-       
     
-        
-        
-   }//main
+}   
    
 
 }//class

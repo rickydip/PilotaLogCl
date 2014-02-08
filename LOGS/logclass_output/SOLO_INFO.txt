@@ -1,4 +1,4 @@
-2014-02-08 17:44:24 INFO [PilotaLogClever.Master:47] - Info Message! LogClass
-2014-02-08 17:44:24 INFO [PilotaLogClever.Master:54] - Info Message! LogClass
-2014-02-08 17:44:24 INFO [PilotaLogClever.Master:61] - Info Message! LogClass
-2014-02-08 17:44:24 INFO [PilotaLogClever.Master:68] - Info Message! LogClass
+2014-02-08 19:19:40 INFO [PilotaLogClever.Master:47] - Info Message! LogClass
+2014-02-08 19:19:40 INFO [PilotaLogClever.Master:54] - Info Message! LogClass
+2014-02-08 19:19:40 INFO [PilotaLogClever.Master:61] - Info Message! LogClass
+2014-02-08 19:19:40 INFO [PilotaLogClever.Master:68] - Info Message! LogClass

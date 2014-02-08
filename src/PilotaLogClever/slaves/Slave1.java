@@ -5,14 +5,14 @@ all'interno del path del file di configurazione
 
 
 
-package PilotaLogClever;
+package PilotaLogClever.slaves;
 
 import java.io.File;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 
-public class LogClass1 {
+public class Slave1 {
     
     //attributi di classe
     
@@ -29,7 +29,7 @@ public class LogClass1 {
     /**
      * costruttore
      */
-    public LogClass1() {
+    public Slave1() {
     }
     
     

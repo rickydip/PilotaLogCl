@@ -1,0 +1,5 @@
+ INFO [main] (Slave2.java:48) - Info Message!   LogClass2
+ INFO [main] (Slave2.java:55) - Info Message!  LogClass2
+ INFO [main] (Slave2.java:62) - Info Message!  LogClass2
+ INFO [main] (Slave2.java:69) - Info Message!  LogClass2
+ INFO [main] (Slave3.java:48) - Info Message! LogClass3

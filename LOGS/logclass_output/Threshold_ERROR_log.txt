@@ -1,0 +1,8 @@
+ERROR [main] (Master.java:49) - Error Message! LogClass
+FATAL [main] (Master.java:50) - Fatal Message! LogClass
+ERROR [main] (Master.java:56) - Error Message! LogClass
+FATAL [main] (Master.java:57) - Fatal Message! LogClass
+ERROR [main] (Master.java:63) - Error Message! LogClass
+FATAL [main] (Master.java:64) - Fatal Message! LogClass
+ERROR [main] (Master.java:70) - Error Message! LogClass
+FATAL [main] (Master.java:71) - Fatal Message! LogClass

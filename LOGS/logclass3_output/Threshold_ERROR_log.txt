@@ -1,0 +1,2 @@
+ERROR [main] (Slave3.java:50) - Error Message! LogClass3
+FATAL [main] (Slave3.java:51) - Fatal Message! LogClass3

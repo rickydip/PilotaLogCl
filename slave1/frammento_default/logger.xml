@@ -1,0 +1,21 @@
+<logger name="pippo" additivity="false">
+<level value="debug"/>
+<appender-ref ref="app_def_1" />
+</logger>
+
+<logger name="pluto" additivity="false">
+<level value="debug"/>
+<appender-ref ref="app_def_1" />
+</logger>
+
+<logger name="paperino" additivity="false">
+<level value="debug"/>
+<appender-ref ref="app_def_1" />
+</logger>
+
+<logger name="paperina" additivity="false">
+<level value="debug"/>
+<appender-ref ref="app_def_1" />
+</logger>
+
+

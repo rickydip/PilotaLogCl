@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
-<log4j:configuration><appender name="FILE7" class="org.apache.log4j.FileAppender">
+<log4j:configuration>
+<appender name="FILE7" class="org.apache.log4j.FileAppender">
    <param name="file" value="LOGS/logclass_output/SOLO_INFO.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
      <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
@@ -26,7 +27,7 @@
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
    </layout>
 </appender>
-<appender name="nome1" class="org.apache.log4j.FileAppender">
+<appender name="app_def_1" class="org.apache.log4j.FileAppender">
    <param name="file" value="/home/riccardo/NetBeansProjects/PilotaLogClever//LOGS/logclass1_output/LOG.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
      <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
@@ -147,22 +148,22 @@
  </logger>
 <logger name="pippo" additivity="false">
 <level value="debug"/>
-<appender-ref ref="nome1" />
+<appender-ref ref="app_def_1" />
 </logger>
 
 <logger name="pluto" additivity="false">
 <level value="debug"/>
-<appender-ref ref="nome1" />
+<appender-ref ref="app_def_1" />
 </logger>
 
 <logger name="paperino" additivity="false">
 <level value="debug"/>
-<appender-ref ref="nome1" />
+<appender-ref ref="app_def_1" />
 </logger>
 
 <logger name="paperina" additivity="false">
 <level value="debug"/>
-<appender-ref ref="nome1" />
+<appender-ref ref="app_def_1" />
 </logger>
 
 
@@ -204,7 +205,7 @@
 <appender-ref ref="FILE7"/>
 <appender-ref ref="FILE8"/>
 <appender-ref ref="FILE9"/>
- <appender-ref ref="nome1"/>
+ <appender-ref ref="app_def_1"/>
 <appender-ref ref="FILE4"/>
 <appender-ref ref="FILE5"/>
 <appender-ref ref="FILE6"/>

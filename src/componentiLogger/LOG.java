@@ -29,7 +29,7 @@ public class LOG {
  
  //#######   B  #########
  
- //dichiaro il path del file di configurazione di log4j   
+ //dichiaro il path del file di configurazione di Log4J   
  private String log4jConfigFile; 
          
    
@@ -105,18 +105,18 @@ public LOG() {
 /**
  * Funzione principale del progetto
  * @param n dim del vettore vett
- * @param vett vettore contenente i path delle componenti validate
- * @param log4jConfigFile path del futuro file di configurazione di log4j
+ * @param vett vettore contenente i path delle componenti sw
+ * @param log4jConfigFile path dove salvare il file di configurazione di Log4J
  * @param radice path del progetto
- * @return 0 procedura corretta
+ * @return 0 
  * @return 1 errore 
  */   
 public int creaFileConfigurazioneLog(){
-//int n, String[] vett, String log4jConfigFile
+
      //########################
      //Processo di validazione# 
      //########################
-     //vettore che conterrà solo le componenti sw validate
+         
      String[] vett_validato= new String[getN_comp_sw()];
      int flag=0;
      int j=0;//dim del vettore validato
@@ -206,13 +206,15 @@ return flag;
 }//validaPath   
    
 /**
- * 
+ * Questa funzione serve a fornire dei frammenti di default per le componenti sw
+ * che altrimenti non potrebbero essere validate (ossia mancano di un loro frammento)
+ * I frammenti creati verranno creati in una directory interna al loro path. 
  * @param componente_sw non validato
- * @param n_fram
+ * @param n_c_sw serve per creare un nome diverso per ogni logger di ogni nuovo componente di default creato 
  * @return 
  */
-public String assegnaFrammento(String componente_sw, int n_fram){
-    String output="";  int flag=0; String nome_app="nome";
+public String assegnaFrammento(String componente_sw, int n_c_sw){
+    String output="";  int flag=0; String nome_app="app_def_";
     //creo il nuovo path
     output=componente_sw+"frammento_default/";
     //se già esiste la cancello
@@ -221,8 +223,8 @@ public String assegnaFrammento(String componente_sw, int n_fram){
     creaDir(output);
     //##########################################
     //creo il contenuto di appender.xml
-    String text_appender ="<appender name=\""+nome_app+n_fram+"\" class=\"org.apache.log4j.FileAppender\">\n" +
-"   <param name=\"file\" value=\""+getRadice()+"/LOGS/logclass"+n_fram+"_output/LOG.txt"+"\"/>\n" +
+    String text_appender ="<appender name=\""+nome_app+n_c_sw+"\" class=\"org.apache.log4j.FileAppender\">\n" +
+"   <param name=\"file\" value=\""+getRadice()+"/LOGS/logclass"+n_c_sw+"_output/LOG.txt"+"\"/>\n" +
 "   <layout class=\"org.apache.log4j.PatternLayout\" >\n" +
 "     <param name=\"ConversionPattern\" value=\"%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n\"/>     \n" +
 "   </layout>\n" +
@@ -257,14 +259,13 @@ public String assegnaFrammento(String componente_sw, int n_fram){
     
     
     
-    //creo il contenuto di appender.xml
+    //creo il contenuto di logger.xml
     String text_logger =""; 
     String comodo="";
     
     for(int i=0;i<lista.size();i++){
-        
         comodo = "<logger name=\""+lista.get(i)+"\" additivity=\"false\">\n<level value=\"debug\"/>\n";
-        text_logger= text_logger+ comodo+"<appender-ref ref=\""+nome_app+n_fram+"\" />\n</logger>\n\n";
+        text_logger= text_logger+ comodo+"<appender-ref ref=\""+nome_app+n_c_sw+"\" />\n</logger>\n\n";
         
     }//for
     
@@ -276,8 +277,8 @@ public String assegnaFrammento(String componente_sw, int n_fram){
     if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file logger.xml!!!");}
     
     //##########################################
-    //creo il contenuto di appender.xml
-    String text_rlogger = " <appender-ref ref=\""+nome_app+n_fram+"\"/>";
+    //creo il contenuto di rootLogger.xml
+    String text_rlogger = " <appender-ref ref=\""+nome_app+n_c_sw+"\"/>";
     //creo il file
     flag=stringToFile(output+"rootLogger.xml",text_rlogger);
     if(flag==1){exit(1);System.out.println("ERRORE nella creazione del file rootLogger.xml!!!");}
@@ -302,13 +303,10 @@ public String componiConfLog(String[] vett_ok,int n,String radice){
      String CODA_configuration ="</log4j:configuration>";
      
      String TESTA_rootLogger = "<logger name=\"log4j.rootLogger\" additivity=\"false\">\n<level value=\"DEBUG\"/>\n";
-     String CODA_rootLogger ="</logger>\n</log4j:configuration>";
+     String CODA_rootLogger ="</logger>\n";
      
      
-    TESTA_configuration = TESTA_configuration.trim().replaceFirst("^([\\W]+)<","<");
-    CODA_configuration = CODA_configuration.trim().replaceFirst("^([\\W]+)<","<"); 
-    
-     
+       
      //stringhe di comodo 
      String Appenders ="";
      String Loggers ="";
@@ -325,7 +323,7 @@ public String componiConfLog(String[] vett_ok,int n,String radice){
     RootLoggers=componirootLogConf(vett_ok,n);
     //System.out.println("RootLoggers"+RootLoggers);
     
-    Log_Finale=TESTA_configuration+Appenders+Loggers+TESTA_rootLogger+RootLoggers+CODA_rootLogger;
+    Log_Finale=TESTA_configuration+Appenders+Loggers+TESTA_rootLogger+RootLoggers+CODA_rootLogger+CODA_configuration;
     
  return Log_Finale;
 }//componiConfLog 
@@ -341,7 +339,9 @@ public String componiAppConf(String [] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
         try {
+            //debug
             System.out.println(path[i]+"appender.xml  "+i);
+            //
             com1=fileToString(path[i]+"appender.xml");
             com2=com2+com1;
         } catch (IOException ex) {
@@ -365,7 +365,9 @@ public String componiLogConf(String[] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
         try {
+            //debug
             System.out.println(path[i]+"logger.xml  "+i);
+            //
             com1=fileToString(path[i]+"logger.xml");
             com2=com2+com1;
         } catch (IOException ex) {
@@ -388,7 +390,9 @@ public String componirootLogConf(String[] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
         try {
+            //debug
             System.out.println(path[i]+"rootLogger.xml  "+i);
+            //
             com1=fileToString(path[i]+"rootLogger.xml");
             com2=com2+com1;
         } catch (IOException ex) {

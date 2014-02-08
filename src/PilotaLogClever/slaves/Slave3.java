@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package PilotaLogClever.slave;
+package PilotaLogClever.slaves;
 import java.io.File;
 import org.apache.log4j.Logger;
 
 
 
-public class LogClass3 {
+public class Slave3 {
     
     //attributi di classe
     
@@ -25,7 +25,7 @@ public class LogClass3 {
     /**
      * costruttore
      */
-    public LogClass3() {
+    public Slave3() {
     }
     
     

@@ -41,14 +41,11 @@
             <class>org.clever.HostManager.NetworkManager.NetworkManagerAgent</class>
             <name/>
         </agent>
-       
-       
-         <!-- inserisco l agente esterno logging   -->
+
     <agent>
 	  <class>org.clever.Common.Logging.LoggingAgent</class>
           <name></name>
     </agent>
-       
        
        
   </agents>

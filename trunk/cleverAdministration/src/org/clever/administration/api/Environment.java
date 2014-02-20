@@ -69,7 +69,10 @@ public class Environment {
             log.error(error);
             throw new CleverClientException(error);
         }
-        
+        //log.debug(inxml);
+        //if(pXML==null){
+        //log.debug("parser null");
+        //}
         Properties properties = new Properties();
         properties.setProperty(XMPP_SERVER,pXML.getElementContent( "server" ));
         properties.setProperty(XMPP_USERNAME,pXML.getElementContent( "username" ));

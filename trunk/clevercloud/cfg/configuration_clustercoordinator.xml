@@ -39,22 +39,19 @@
 	  <class>org.clever.ClusterManager.VirtualizationManager.VirtualizationManagerAgent</class>
           <name></name>
     </agent>
-    
-    <!-- inserisco l agente esterno logging   -->
+
+
     <agent>
 	  <class>org.clever.Common.Logging.LoggingAgent</class>
           <name></name>
     </agent>
-    
-    
-    
-    
-    
+
+
+
   </agents>
   <brain>
     <class>org.clever.ClusterManager.Brain.SensorBrain</class>
     <name />
   </brain>
-  
 </configuration>
 

@@ -2,10 +2,9 @@
 
 package org.clever.Common.Logging;
 
-import java.util.logging.Level;
 import org.clever.Common.Communicator.Agent;
 import org.clever.Common.Exceptions.CleverException;
-import org.clever.HostManager.Info.InfoAgent;
+
 
 /**
  *

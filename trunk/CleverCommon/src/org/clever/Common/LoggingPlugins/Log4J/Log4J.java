@@ -235,9 +235,9 @@ public int creaFileConfigurazioneLog(){
      int j=0;//dim del vettore validato
      
      for(int i=0;i<getN();i++){
-         flag=validaComponenteSW(getComponenti_sw()[i]);
-         if(flag==0){vett_validato[j]=getComponenti_sw()[i];j++;}
-         if(flag==1){vett_validato[j]=assegnaFrammento(getComponenti_sw()[i],i);j++;}
+         flag=validaComponenteSW(getVett()[i]);
+         if(flag==0){vett_validato[j]=getVett()[i];j++;}
+         if(flag==1){vett_validato[j]=assegnaFrammento(getVett()[i],i);j++;}
      flag=0;
      }//
      
@@ -360,7 +360,7 @@ public String assegnaFrammento(String componente_sw, int n_c_sw){
        try {
            file = fileToString(componente_sw+"/logger_attivi.txt");
        } catch (IOException ex) {
-           java.util.logging.Logger.getLogger(LOG.class.getName()).log(Level.SEVERE, null, ex);
+           java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
        }
            lista = stringToArrayList(file);
            
@@ -458,7 +458,7 @@ public String componiAppConf(String [] path,int n){
             com1=fileToString(path[i]+"appender.xml");
             com2=com2+com1;
         } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(LOG.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }
@@ -484,7 +484,7 @@ public String componiLogConf(String[] path,int n){
             com1=fileToString(path[i]+"logger.xml");
             com2=com2+com1;
         } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(LOG.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
     
@@ -509,7 +509,7 @@ public String componirootLogConf(String[] path,int n){
             com1=fileToString(path[i]+"rootLogger.xml");
             com2=com2+com1;
         } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(LOG.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
             }
     }
  
@@ -601,7 +601,7 @@ public int stringToFile(String path, String text){
            out.println(text);
        } //try
        catch (FileNotFoundException ex) {
-           java.util.logging.Logger.getLogger(LOG.class.getName()).log(Level.SEVERE, null, ex);
+           java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
            flag=1;
        } finally {
            out.close();

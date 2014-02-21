@@ -24,6 +24,10 @@
 
 package org.clever.Common.Logging;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import org.clever.Common.Communicator.Agent;
 import org.clever.Common.Plugins.RunnerPlugin;
 
 /**
@@ -39,6 +43,20 @@ import org.clever.Common.Plugins.RunnerPlugin;
 public interface LoggingAgentPlugin extends RunnerPlugin {
 
     
+public int creaFileConfigurazioneLog();
+public int validaComponenteSW(String path);
+public String assegnaFrammento(String componente_sw, int n_c_sw);
+public String componiConfLog(String[] vett_ok,int n,String radice);
+public String componiAppConf(String [] path,int n);
+public String componiLogConf(String[] path,int n);
+public String componirootLogConf(String[] path,int n);
+public int validaFile(String path);
+public void componiFile(String link_file_contenitore, String contenuto_da_appendere);
+public String fileToString(String path);
+public void creaDir(String directoryName);
+public void deleteFile(String file);
+
+public void setOwner(Agent owner);
     
     
     

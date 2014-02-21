@@ -59,7 +59,7 @@ public class Log4J implements LoggingAgentPlugin{
     //variabili interne ad init
     String radice = System.getProperty("user.dir")+ File.separator;
     String log4jConfigFile = System.getProperty("user.dir")
-                + File.separator + "master_dinamic.xml";
+                + File.separator + "log4j_configuration_file.xml";
     
     
     //VARIABILI solo per prova
@@ -71,20 +71,23 @@ public class Log4J implements LoggingAgentPlugin{
     String[] vett= {path1,path2,path3,path4};
     
     
-    
+    /**
+     * Costruttore
+     */
     public Log4J() {
         logger = Logger.getLogger("LoggerLog4JClever");
         logger.info( "LoggingLog4J plugin created: " );
     }
     
-    public Log4J(String radice, String log4jConfigFile, String[] componenti_sw, int n_comp_sw) {
+    /*
+    public Log4J(String radice, String log4jConfigFile, String[] vett, int n) {
      this.radice = radice;
      this.log4jConfigFile = log4jConfigFile;
-     this.vett = componenti_sw;
-     this.n = n_comp_sw;
+     this.vett = vett;
+     this.n = n;
     }
     
-      
+     */ 
     
      @Override
     public String getName() {
@@ -119,21 +122,25 @@ public class Log4J implements LoggingAgentPlugin{
     public void init(Element params, Agent owner) throws CleverException {
         
     int flag=0; 
- 
+    
+    logger.info("La radice è: "+radice);
+    
+    
+    
     //creo l'oggetto entro cui si svolgono tutte le operazioni  
-    Log4J log = new Log4J(radice,log4jConfigFile,vett,n); 
+//    Log4J log = new Log4J(radice,log4jConfigFile,vett,n); 
     
     //Pulisco la dir dei log di precedenti iterazioni
-    log.deleteDir(radice+"/LOGS/");
+//    log.deleteDir(radice+"/LOGS/");
     //Pulisco il file di conf di log4j di precedenti iterazioni  
-    log.deleteFile(log4jConfigFile);
+//    log.deleteFile(log4jConfigFile);
        
         
      //AVVIO ROUTINE DI CREAZIONE
      //#######################################
-      flag=log.creaFileConfigurazioneLog();//#
+//      flag=log.creaFileConfigurazioneLog();//#
      //ASSEGNO IL FILE CREATO A LOG4J      //#
-     if(flag==0){log.assegnaConfToLog4j();}//#
+//     if(flag==0){log.assegnaConfToLog4j();}//#
      //#######################################
         
         
@@ -357,11 +364,7 @@ public String assegnaFrammento(String componente_sw, int n_c_sw){
            // apro il file che contiene i nomi dei logger
            ArrayList lista = new ArrayList();
            String file = null;
-       try {
            file = fileToString(componente_sw+"/logger_attivi.txt");
-       } catch (IOException ex) {
-           java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
-       }
            lista = stringToArrayList(file);
            
            //debug
@@ -451,15 +454,9 @@ public String componiConfLog(String[] vett_ok,int n,String radice){
 public String componiAppConf(String [] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
-        try {
-            //debug
-            System.out.println(path[i]+"appender.xml  "+i);
-            //
-            com1=fileToString(path[i]+"appender.xml");
-            com2=com2+com1;
-        } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        System.out.println(path[i]+"appender.xml  "+i);
+        com1=fileToString(path[i]+"appender.xml");
+        com2=com2+com1;
        
     }
  
@@ -477,15 +474,9 @@ public String componiAppConf(String [] path,int n){
 public String componiLogConf(String[] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
-        try {
-            //debug
-            System.out.println(path[i]+"logger.xml  "+i);
-            //
-            com1=fileToString(path[i]+"logger.xml");
-            com2=com2+com1;
-        } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        System.out.println(path[i]+"logger.xml  "+i);
+        com1=fileToString(path[i]+"logger.xml");
+        com2=com2+com1;
     }
     
  
@@ -502,15 +493,9 @@ public String componiLogConf(String[] path,int n){
 public String componirootLogConf(String[] path,int n){
     String com1 ="",com2 ="";
     for(int i=0;i<n;i++){
-        try {
-            //debug
-            System.out.println(path[i]+"rootLogger.xml  "+i);
-            //
-            com1=fileToString(path[i]+"rootLogger.xml");
-            com2=com2+com1;
-        } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        System.out.println(path[i]+"rootLogger.xml  "+i);
+        com1=fileToString(path[i]+"rootLogger.xml");
+        com2=com2+com1;
     }
  
  return com2;   
@@ -572,16 +557,23 @@ try {
  * @throws FileNotFoundException
  * @throws IOException 
  */
-public String fileToString( String path ) throws FileNotFoundException, IOException{
-    BufferedReader reader = new BufferedReader( new FileReader (path));
+public String fileToString( String path ){
+    BufferedReader reader = null;
+        try {
+            reader = new BufferedReader( new FileReader (path));
+        } catch (FileNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
+        }
     String         line = null;
     StringBuilder  stringBuilder = new StringBuilder();
     String         ls = System.getProperty("line.separator");
-
-    while( ( line = reader.readLine() ) != null ) {
-        stringBuilder.append( line );
-        stringBuilder.append( ls );
-    }
+        try {
+            while( ( line = reader.readLine() ) != null ) {
+                stringBuilder.append( line );
+                stringBuilder.append( ls );
+            }   } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(Log4J.class.getName()).log(Level.SEVERE, null, ex);
+        }
    //System.out.println(stringBuilder.toString());
     return stringBuilder.toString();
 }
@@ -717,4 +709,4 @@ public void assegnaConfToLog4j(){
     
     
     
-}
+}//Log4J

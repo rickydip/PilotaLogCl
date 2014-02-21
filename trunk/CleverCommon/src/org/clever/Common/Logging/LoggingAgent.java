@@ -4,6 +4,7 @@ package org.clever.Common.Logging;
 
 import org.clever.Common.Communicator.Agent;
 import org.clever.Common.Exceptions.CleverException;
+import org.clever.Common.LoggingPlugins.Log4J.Log4J;
 
 
 /**
@@ -13,7 +14,8 @@ import org.clever.Common.Exceptions.CleverException;
 public class LoggingAgent extends Agent {
 
     
-    private LoggingAgentPlugin loggingPlugin;
+ private LoggingAgentPlugin loggingPlugin;
+ 
     
 //costruttore    
 public LoggingAgent() throws CleverException 
@@ -26,7 +28,7 @@ public LoggingAgent() throws CleverException
     
     @Override
     public void initialization() throws Exception {
-        logger.info("\n\nLoggingAgent Started!\n\n");
+        logger.info("\n\n(initialization) LoggingAgent Started!\n\n");
         if(super.getAgentName().equals("NoName"))
             {
              super.setAgentName("LoggingAgent");
@@ -43,13 +45,13 @@ public LoggingAgent() throws CleverException
         
       try 
         {
-            logger.info( "LoggingPlugin start creation" );
+            logger.info( "(initialization) LoggingPlugin start creation." );
             loggingPlugin = (LoggingAgentPlugin) super.startPlugin("./cfg/configuration_logging.xml","/org/clever/Common/Logging/configuration_logging.xml");        
             loggingPlugin.setOwner(this);
-            logger.info("LoggingPlugin created ");
+            logger.info("(initialization) LoggingPlugin created.");
             
         } catch (Exception ex) {
-            logger.error("LoggingPlugin creation failed: " + ex.getMessage());
+            logger.error("(initialization)LoggingPlugin creation failed: " + ex.getMessage());
         }
      
         
@@ -57,6 +59,10 @@ public LoggingAgent() throws CleverException
         
     }
 
+   
+    
+    
+    
     @Override
     public Class getPluginClass() {
         return this.cl;

@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/riccardo/NetBeansProjects/clever-unime/trunk/clevercloud/sources/org/clever/Common/LoggingPlugins/Log4J/Log4J.java</file>
-            <file>file:/home/riccardo/NetBeansProjects/clever-unime/trunk/clevercloud/sources/org/clever/Common/Logging/LoggingAgent.java</file>
+            <file>file:/home/riccardo/NetBeansProjects/cl-log/trunk/clevercloud/sources/org/clever/HostManager/NetworkManager/NetworkManagerAgent.java</file>
+            <file>file:/home/riccardo/NetBeansProjects/cl-log/trunk/clevercloud/sources/org/clever/HostManager/ImageManager/ImageManagerAgent.java</file>
+            <file>file:/home/riccardo/NetBeansProjects/cl-log/trunk/clevercloud/sources/org/clever/ClusterManager/DatabaseManager/DatabaseManagerAgent.java</file>
+            <file>file:/home/riccardo/NetBeansProjects/cl-log/trunk/clevercloud/sources/org/clever/HostManager/Monitor/MonitorAgent.java</file>
         </group>
     </open-files>
 </project-private>

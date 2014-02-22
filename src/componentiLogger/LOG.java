@@ -142,7 +142,7 @@ public int creaFileConfigurazioneLog(){
      String log_finale = "";
      
      //stringa che contiene la configurazione finale
-     log_finale=componiConfLog(vett_validato,j,getRadice());
+     log_finale=componiConfLog(vett_validato,j);
      
      //System.out.println(log_finale);
      
@@ -295,7 +295,7 @@ public String assegnaFrammento(String componente_sw, int n_c_sw){
  * @param radice path di ambiente del progetto  
  * @return stringa contenente il file di configurazione di log finale
  */
-public String componiConfLog(String[] vett_ok,int n,String radice){
+public String componiConfLog(String[] vett_ok,int n){
      String Log_Finale ="";
     
               

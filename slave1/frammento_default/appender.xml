@@ -1,5 +1,5 @@
 <appender name="app_def_1" class="org.apache.log4j.FileAppender">
-   <param name="file" value="/home/riccardo/NetBeansProjects/PilotaLogClever//LOGS/logclass1_output/LOG.txt"/>
+   <param name="file" value="/home/riccardo/NetBeansProjects/PilotaLogCl//LOGS/logclass1_output/LOG.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
      <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
    </layout>

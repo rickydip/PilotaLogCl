@@ -1,0 +1,26 @@
+<logger name="com_foo" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE7" />
+        <appender-ref ref="FILE8" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
+</logger>
+ <logger name="com_foo_bar" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE7" />
+        <appender-ref ref="FILE8" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="logger" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE7" />
+        <appender-ref ref="FILE8" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="log" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE7" />
+        <appender-ref ref="FILE8" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
+ </logger>

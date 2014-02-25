@@ -1,0 +1,2 @@
+ INFO [main] (Slave3.java:41) - Info Message! comodo2 su slave3
+ INFO [main] (Slave3.java:49) - Info Message! italia dichiarato su slave3

@@ -7,6 +7,7 @@ all'interno del path del file di configurazione
 
 package PilotaLogClever;
 
+import PilotaLogClever.slaves.Slave1;
 import java.io.File;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -27,7 +28,6 @@ public class Master {
     
     
     
-    
     /**
      * costruttore
      */
@@ -37,38 +37,39 @@ public class Master {
     
    public void metodo(){
    
+    //dichiarato nei frammenti slave1
+    Logger pippo =Logger.getLogger("comodo1");
     
-    //#################################
-      //esecuzione del programma master##
-      //#################################
-     
-      log0.trace("Trace Message! LogClass");
-      log0.debug("Debug Message! LogClass");
-      log0.info("Info Message! LogClass");
-      log0.warn("Warn Message! LogClass");
-      log0.error("Error Message! LogClass");
-      log0.fatal("Fatal Message! LogClass");
+     Slave1 q = new Slave1(pippo);
+     q.metodo();
+       
+      log0.trace("Trace Message! sono  Master");
+      log0.debug("Debug Message! sono  Master");
+      log0.info("Info Message! sono Master");
+      log0.warn("Warn Message! sono Master");
+      log0.error("Error Message! sono  Master");
+      log0.fatal("Fatal Message! sono  Master");
    
-      logger0.trace("Trace Message! LogClass");
-      logger0.debug("Debug Message! LogClass");
-      logger0.info("Info Message! LogClass");
-      logger0.warn("Warn Message! LogClass");
-      logger0.error("Error Message! LogClass");
-      logger0.fatal("Fatal Message! LogClass"); 
+      logger0.trace("Trace Message! sono Master");
+      logger0.debug("Debug Message! sono Master");
+      logger0.info("Info Message! sono Master");
+      logger0.warn("Warn Message! sono Master");
+      logger0.error("Error Message! sono Master");
+      logger0.fatal("Fatal Message! sono Master"); 
    
-      Logger0.trace("Trace Message! LogClass");
-      Logger0.debug("Debug Message! LogClass");
-      Logger0.info("Info Message! LogClass");
-      Logger0.warn("Warn Message! LogClass");
-      Logger0.error("Error Message! LogClass");
-      Logger0.fatal("Fatal Message! LogClass");
+      Logger0.trace("Trace Message! sono Master");
+      Logger0.debug("Debug Message! sono Master");
+      Logger0.info("Info Message! sono Master");
+      Logger0.warn("Warn Message! sono Master");
+      Logger0.error("Error Message! sono Master");
+      Logger0.fatal("Fatal Message! sono Master");
       
-      Log0.trace("Trace Message! LogClass");
-      Log0.debug("Debug Message! LogClass");
-      Log0.info("Info Message! LogClass");
-      Log0.warn("Warn Message! LogClass");
-      Log0.error("Error Message! LogClass");
-      Log0.fatal("Fatal Message! LogClass");
+      Log0.trace("Trace Message! sono Master");
+      Log0.debug("Debug Message! sono Master");
+      Log0.info("Info Message! sono Master");
+      Log0.warn("Warn Message! sono Master");
+      Log0.error("Error Message! sono Master");
+      Log0.fatal("Fatal Message! sono Master");
    
      
       

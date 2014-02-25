@@ -1,0 +1,42 @@
+<!-- <logger name="pippo" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE11" />
+        <appender-ref ref="FILE22" />
+        <appender-ref ref="FILE33" />
+</logger>
+
+<logger name="pluto" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE11" />
+        <appender-ref ref="FILE22" />
+        <appender-ref ref="FILE33" />
+ </logger>
+
+<logger name="paperino" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE11" />
+        <appender-ref ref="FILE22" />
+        <appender-ref ref="FILE33" />
+ </logger>
+
+<logger name="paperina" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE11" />
+        <appender-ref ref="FILE22" />
+        <appender-ref ref="FILE33" />
+ </logger>
+
+-->
+<logger name="comodo2" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE11" />
+        <appender-ref ref="FILE22" />
+        <appender-ref ref="FILE33" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="italia" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE11" />
+        <appender-ref ref="FILE22" />
+        <appender-ref ref="FILE33" /><appender-ref ref="soloinfo" />
+ </logger>

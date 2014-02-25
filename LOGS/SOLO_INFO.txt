@@ -1,0 +1,19 @@
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:43] - Info Message! comodo, su Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:52] - Info Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:59] - Info Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:66] - Info Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:73] - Info Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.Master:48] - Info Message! sono Master
+2014-02-25 16:59:09 INFO [PilotaLogClever.Master:55] - Info Message! sono Master
+2014-02-25 16:59:09 INFO [PilotaLogClever.Master:62] - Info Message! sono Master
+2014-02-25 16:59:09 INFO [PilotaLogClever.Master:69] - Info Message! sono Master
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave3:41] - Info Message! comodo2 su slave3
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave3:49] - Info Message! italia dichiarato su slave3
+2014-02-25 16:59:09 INFO [PilotaLogClever.Slave:51] - Info Message! sono Slave
+2014-02-25 16:59:09 INFO [PilotaLogClever.Slave:58] - Info Message! sono Slave
+2014-02-25 16:59:09 INFO [PilotaLogClever.Slave:65] - Info Message! sono Slave
+2014-02-25 16:59:09 INFO [PilotaLogClever.Slave:72] - Info Message! sono Slave
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave2:36] - Info Message!   sono Slave2
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave2:43] - Info Message!  sono Slave2
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave2:50] - Info Message!  sono Slave2
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave2:57] - Info Message!  sono Slave2

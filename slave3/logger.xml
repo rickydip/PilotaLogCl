@@ -1,6 +1,0 @@
-<logger name="italia" additivity="false">
-    <level value="debug" />
-    <appender-ref ref="FILE66" />
-    <appender-ref ref="FILE67" />
-    <appender-ref ref="FILE68" />
-</logger>

@@ -1,0 +1,26 @@
+<logger name="a" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE77" />
+        <appender-ref ref="FILE88" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
+</logger>
+ <logger name="b" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE77" />
+        <appender-ref ref="FILE88" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="c" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE77" />
+        <appender-ref ref="FILE88" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="d" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE77" />
+        <appender-ref ref="FILE88" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
+ </logger>

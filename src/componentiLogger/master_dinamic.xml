@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration>
+<appender name="soloinfo" class="org.apache.log4j.FileAppender">
+   <param name="file" value="LOGS/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+     <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
 <appender name="FILE7" class="org.apache.log4j.FileAppender">
    <param name="file" value="LOGS/master/SOLO_INFO.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
@@ -27,6 +39,20 @@
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
    </layout>
 </appender>
+<appender name="soloinfo" class="org.apache.log4j.FileAppender">
+   <param name="file" value="LOGS/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+     <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+
+
 <appender name="FILE77" class="org.apache.log4j.FileAppender">
    <param name="file" value="LOGS/SLAVE/SOLO_INFO.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
@@ -53,6 +79,19 @@
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
    </layout>
 </appender>
+<appender name="soloinfo" class="org.apache.log4j.FileAppender">
+   <param name="file" value="LOGS/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+     <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+
 <appender name="FILE" class="org.apache.log4j.FileAppender">
    <param name="file" value="LOGS/master/slave1/SOLO_INFO.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
@@ -79,6 +118,18 @@
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
    </layout>
 </appender>
+<appender name="soloinfo" class="org.apache.log4j.FileAppender">
+   <param name="file" value="LOGS/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+     <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
 <appender name="FILE11" class="org.apache.log4j.FileAppender">
    <param name="file" value="LOGS/SLAVE/slave3/SOLO_INFO.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
@@ -105,6 +156,20 @@
         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>  
    </layout>
 </appender>
+<appender name="soloinfo" class="org.apache.log4j.FileAppender">
+   <param name="file" value="LOGS/SOLO_INFO.txt"/>
+   <layout class="org.apache.log4j.PatternLayout" >
+     <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>     
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelMatchFilter">
+      <param name="LevelToMatch" value="INFO" />
+      <param name="AcceptOnMatch" value="true" />
+    </filter>
+    <filter class="org.apache.log4j.varia.DenyAllFilter" /> 
+</appender>
+
+
+
 <appender name="FILE111" class="org.apache.log4j.FileAppender">
    <param name="file" value="LOGS/slave2/SOLO_INFO.txt"/>
    <layout class="org.apache.log4j.PatternLayout" >
@@ -135,87 +200,87 @@
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
-        <appender-ref ref="FILE9" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
 </logger>
  <logger name="com_foo_bar" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
-        <appender-ref ref="FILE9" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="logger" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
-        <appender-ref ref="FILE9" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="log" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE7" />
         <appender-ref ref="FILE8" />
-        <appender-ref ref="FILE9" />
+        <appender-ref ref="FILE9" /><appender-ref ref="soloinfo" />
  </logger>
 <logger name="a" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE77" />
         <appender-ref ref="FILE88" />
-        <appender-ref ref="FILE99" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
 </logger>
  <logger name="b" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE77" />
         <appender-ref ref="FILE88" />
-        <appender-ref ref="FILE99" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="c" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE77" />
         <appender-ref ref="FILE88" />
-        <appender-ref ref="FILE99" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="d" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE77" />
         <appender-ref ref="FILE88" />
-        <appender-ref ref="FILE99" />
+        <appender-ref ref="FILE99" /><appender-ref ref="soloinfo" />
  </logger>
 <logger name="pippo" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
-        <appender-ref ref="FILE3" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
 </logger>
 
 <logger name="pluto" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
-        <appender-ref ref="FILE3" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="paperino" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
-        <appender-ref ref="FILE3" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="paperina" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
-        <appender-ref ref="FILE3" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="comodo1" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE" />
         <appender-ref ref="FILE2" />
-        <appender-ref ref="FILE3" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
  </logger>
 <!-- <logger name="pippo" additivity="false">
         <level value="debug" />
@@ -250,58 +315,59 @@
         <level value="debug" />
         <appender-ref ref="FILE11" />
         <appender-ref ref="FILE22" />
-        <appender-ref ref="FILE33" />
+        <appender-ref ref="FILE33" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="italia" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE11" />
         <appender-ref ref="FILE22" />
-        <appender-ref ref="FILE33" />
+        <appender-ref ref="FILE33" /><appender-ref ref="soloinfo" />
  </logger>
 <logger name="Juventus" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE111" />
         <appender-ref ref="FILE222" />
-        <appender-ref ref="FILE333" />
+        <appender-ref ref="FILE333" /><appender-ref ref="soloinfo" />
 </logger>
 
 <logger name="Inter" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE111" />
         <appender-ref ref="FILE222" />
-        <appender-ref ref="FILE333" />
+        <appender-ref ref="FILE333" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="Milan" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE111" />
         <appender-ref ref="FILE222" />
-        <appender-ref ref="FILE333" />
+        <appender-ref ref="FILE333" /><appender-ref ref="soloinfo" />
  </logger>
 
 <logger name="Barcellona" additivity="false">
         <level value="debug" />
         <appender-ref ref="FILE111" />
         <appender-ref ref="FILE222" />
-        <appender-ref ref="FILE333" />
+        <appender-ref ref="FILE333" /><appender-ref ref="soloinfo" />
  </logger>
 <logger name="log4j.rootLogger" additivity="false">
 <level value="DEBUG"/>
 <appender-ref ref="FILE7"/>
 <appender-ref ref="FILE8"/>
 <appender-ref ref="FILE9"/>
+<appender-ref ref="soloinfo" />
 <appender-ref ref="FILE77"/>
 <appender-ref ref="FILE88"/>
-<appender-ref ref="FILE99"/>
+<appender-ref ref="FILE99"/><appender-ref ref="soloinfo" />
 <appender-ref ref="FILE"/>
 <appender-ref ref="FILE2"/>
-<appender-ref ref="FILE3"/>
+<appender-ref ref="FILE3"/><appender-ref ref="soloinfo" />
 <appender-ref ref="FILE11"/>
 <appender-ref ref="FILE22"/>
-<appender-ref ref="FILE33"/>
+<appender-ref ref="FILE33"/><appender-ref ref="soloinfo" />
 <appender-ref ref="FILE111"/>
 <appender-ref ref="FILE222"/>
-<appender-ref ref="FILE333"/>
+<appender-ref ref="FILE333"/><appender-ref ref="soloinfo" />
 </logger>
 </log4j:configuration>

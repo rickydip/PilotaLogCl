@@ -1,0 +1,25 @@
+2014-02-25 16:59:09 DEBUG [PilotaLogClever.slaves.Slave1:42] - Info Message! comodo, su Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:43] - Info Message! comodo, su Slave1
+2014-02-25 16:59:09 WARN [PilotaLogClever.slaves.Slave1:44] - Warn Message! comodo, su Slave1
+2014-02-25 16:59:09 ERROR [PilotaLogClever.slaves.Slave1:45] - Error Message! comodo, su Slave1
+2014-02-25 16:59:09 FATAL [PilotaLogClever.slaves.Slave1:46] - Fatal Message! comodo, su Slave1
+2014-02-25 16:59:09 DEBUG [PilotaLogClever.slaves.Slave1:51] - Debug Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:52] - Info Message! sono Slave1
+2014-02-25 16:59:09 WARN [PilotaLogClever.slaves.Slave1:53] - Warn Message! sono Slave1
+2014-02-25 16:59:09 ERROR [PilotaLogClever.slaves.Slave1:54] - Error Message! sono Slave1
+2014-02-25 16:59:09 FATAL [PilotaLogClever.slaves.Slave1:55] - Fatal Message! sono Slave1
+2014-02-25 16:59:09 DEBUG [PilotaLogClever.slaves.Slave1:58] - Debug Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:59] - Info Message! sono Slave1
+2014-02-25 16:59:09 WARN [PilotaLogClever.slaves.Slave1:60] - Warn Message! sono Slave1
+2014-02-25 16:59:09 ERROR [PilotaLogClever.slaves.Slave1:61] - Error Message! sono Slave1
+2014-02-25 16:59:09 FATAL [PilotaLogClever.slaves.Slave1:62] - Fatal Message! sono Slave1
+2014-02-25 16:59:09 DEBUG [PilotaLogClever.slaves.Slave1:65] - Debug Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:66] - Info Message! sono Slave1
+2014-02-25 16:59:09 WARN [PilotaLogClever.slaves.Slave1:67] - Warn Message! sono Slave1
+2014-02-25 16:59:09 ERROR [PilotaLogClever.slaves.Slave1:68] - Error Message! sono Slave1
+2014-02-25 16:59:09 FATAL [PilotaLogClever.slaves.Slave1:69] - Fatal Message! sono Slave1
+2014-02-25 16:59:09 DEBUG [PilotaLogClever.slaves.Slave1:72] - Debug Message! sono Slave1
+2014-02-25 16:59:09 INFO [PilotaLogClever.slaves.Slave1:73] - Info Message! sono Slave1
+2014-02-25 16:59:09 WARN [PilotaLogClever.slaves.Slave1:74] - Warn Message!sono Slave1
+2014-02-25 16:59:09 ERROR [PilotaLogClever.slaves.Slave1:75] - Error Message! sono Slave1
+2014-02-25 16:59:09 FATAL [PilotaLogClever.slaves.Slave1:76] - Fatal Message! sono Slave1

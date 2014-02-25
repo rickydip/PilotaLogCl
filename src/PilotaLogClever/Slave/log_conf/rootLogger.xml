@@ -1,0 +1,3 @@
+<appender-ref ref="FILE77"/>
+<appender-ref ref="FILE88"/>
+<appender-ref ref="FILE99"/><appender-ref ref="soloinfo" />

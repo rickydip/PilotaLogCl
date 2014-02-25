@@ -1,4 +1,0 @@
-2014-02-22 21:49:05 INFO [PilotaLogClever.slaves.Slave1:52] - Info Message! LogClass1
-2014-02-22 21:49:05 INFO [PilotaLogClever.slaves.Slave1:59] - Info Message! LogClass1
-2014-02-22 21:49:05 INFO [PilotaLogClever.slaves.Slave1:66] - Info Message! LogClass1
-2014-02-22 21:49:05 INFO [PilotaLogClever.slaves.Slave1:73] - Info Message! LogClass1

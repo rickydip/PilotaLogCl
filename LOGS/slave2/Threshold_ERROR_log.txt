@@ -1,0 +1,8 @@
+2014-02-25 16:59:09,978 [main] ERROR (Slave2.java:38) Error Message!  sono Slave2
+2014-02-25 16:59:09,978 [main] FATAL (Slave2.java:39) Fatal Message!  sono Slave2
+2014-02-25 16:59:09,979 [main] ERROR (Slave2.java:45) Error Message!  sono Slave2
+2014-02-25 16:59:09,979 [main] FATAL (Slave2.java:46) Fatal Message!  sono Slave2
+2014-02-25 16:59:09,980 [main] ERROR (Slave2.java:52) Error Message!  sono Slave2
+2014-02-25 16:59:09,980 [main] FATAL (Slave2.java:53) Fatal Message!  sono Slave2
+2014-02-25 16:59:09,981 [main] ERROR (Slave2.java:59) Error Message!  sono Slave2
+2014-02-25 16:59:09,981 [main] FATAL (Slave2.java:60) Fatal Message!  sono Slave2

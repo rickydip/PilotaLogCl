@@ -1,0 +1,34 @@
+<logger name="pippo" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
+</logger>
+
+<logger name="pluto" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="paperino" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="paperina" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
+ </logger>
+
+<logger name="comodo1" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="FILE" />
+        <appender-ref ref="FILE2" />
+        <appender-ref ref="FILE3" /><appender-ref ref="soloinfo" />
+ </logger>

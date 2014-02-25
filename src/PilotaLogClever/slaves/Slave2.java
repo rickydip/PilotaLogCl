@@ -30,46 +30,34 @@ public class Slave2 {
     
    public void metodo(){
       
-     //################################################################## 
-     //gestione del file di log locale  
-     //##################################################################  
-     //String log4jConfigFile = System.getProperty("user.dir")
-     //           + File.separator + "slave2.xml"; 
-     // 
-     //System.out.println(log4jConfigFile);
-     //DOMConfigurator.configure(log4jConfigFile);
-     //##################################################################   
-     //il file di log implementa politiche di rolling
-     //################################################################## 
-     
-          
-      log2.trace("Trace Message!  LogClass2");
-      log2.debug("Debug Message!  LogClass2");
-      log2.info("Info Message!   LogClass2");
-      log2.warn("Warn Message!  LogClass2");
-      log2.error("Error Message!  LogClass2");
-      log2.fatal("Fatal Message!  LogClass2");
+             
+      log2.trace("Trace Message!  sono Slave2");
+      log2.debug("Debug Message!  sono Slave2");
+      log2.info("Info Message!   sono Slave2");
+      log2.warn("Warn Message!  sono Slave2");
+      log2.error("Error Message!  sono Slave2");
+      log2.fatal("Fatal Message!  sono Slave2");
    
-      logger2.trace("Trace Message!  LogClass2");
-      logger2.debug("Debug Message!  LogClass2");
-      logger2.info("Info Message!  LogClass2");
-      logger2.warn("Warn Message!  LogClass2");
-      logger2.error("Error Message!  LogClass2");
-      logger2.fatal("Fatal Message!  LogClass2"); 
+      logger2.trace("Trace Message!  sono Slave2");
+      logger2.debug("Debug Message!  sono Slave2");
+      logger2.info("Info Message!  sono Slave2");
+      logger2.warn("Warn Message!  sono Slave2");
+      logger2.error("Error Message!  sono Slave2");
+      logger2.fatal("Fatal Message!  sono Slave2"); 
    
-      Logger2.trace("Trace Message!  LogClass2");
-      Logger2.debug("Debug Message!  LogClass2");
-      Logger2.info("Info Message!  LogClass2");
-      Logger2.warn("Warn Message!  LogClass2");
-      Logger2.error("Error Message!  LogClass2");
-      Logger2.fatal("Fatal Message!  LogClass2");
+      Logger2.trace("Trace Message!  sono Slave2");
+      Logger2.debug("Debug Message!  sono Slave2");
+      Logger2.info("Info Message!  sono Slave2");
+      Logger2.warn("Warn Message!  sono Slave2");
+      Logger2.error("Error Message!  sono Slave2");
+      Logger2.fatal("Fatal Message!  sono Slave2");
       
-      Log2.trace("Trace Message!  LogClass2");
-      Log2.debug("Debug Message!  LogClass2");
-      Log2.info("Info Message!  LogClass2");
-      Log2.warn("Warn Message!  LogClass2");
-      Log2.error("Error Message!  LogClass2");
-      Log2.fatal("Fatal Message!  LogClass2");
+      Log2.trace("Trace Message!  sono Slave2");
+      Log2.debug("Debug Message!  sono Slave2");
+      Log2.info("Info Message!  sono Slave2");
+      Log2.warn("Warn Message!  sono Slave2");
+      Log2.error("Error Message!  sono Slave2");
+      Log2.fatal("Fatal Message!  sono Slave2");
       
      }//metodo
 }

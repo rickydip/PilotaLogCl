@@ -22,58 +22,58 @@ public class Slave1 {
     org.apache.log4j.Logger Log1 = Logger.getLogger("paperina");
     
     
+    public Logger comodo = null; 
     
-    
-    
-    
-    /**
-     * costruttore
-     */
-    public Slave1() {
+   
+    public Slave1(Logger pippo) {
+        this.comodo=pippo;
     }
-    
+
+    public Slave1() {
+       
+    }
+     
     
    public void metodo(){
            
-   //################################################################## 
-   //gestione del file di log locale  
-   //################################################################## 
-   // String log4jConfigFile = System.getProperty("user.dir")
-   //             + File.separator + "slave1.xml"; 
-   // System.out.println(log4jConfigFile);
-   // DOMConfigurator.configure(log4jConfigFile);
-   //################################################################## 
+   // comodo=Logger.getLogger("comodo1");
+       
+   if (comodo!=null)   {
+      comodo.debug("Info Message! comodo, su Slave1");
+      comodo.info("Info Message! comodo, su Slave1");
+      comodo.warn("Warn Message! comodo, su Slave1");
+      comodo.error("Error Message! comodo, su Slave1");
+      comodo.fatal("Fatal Message! comodo, su Slave1");
+   }
       
       
-      
-     
-      log1.trace("Trace Message! LogClass1");
-      log1.debug("Debug Message! LogClass1");
-      log1.info("Info Message! LogClass1");
-      log1.warn("Warn Message! LogClass1");
-      log1.error("Error Message! LogClass1");
-      log1.fatal("Fatal Message! LogClass1");
+      log1.trace("Trace Message! sono Slave1");
+      log1.debug("Debug Message! sono Slave1");
+      log1.info("Info Message! sono Slave1");
+      log1.warn("Warn Message! sono Slave1");
+      log1.error("Error Message! sono Slave1");
+      log1.fatal("Fatal Message! sono Slave1");
    
-      logger1.trace("Trace Message! LogClass1");
-      logger1.debug("Debug Message! LogClass1");
-      logger1.info("Info Message! LogClass1");
-      logger1.warn("Warn Message! LogClass1");
-      logger1.error("Error Message! LogClass1");
-      logger1.fatal("Fatal Message! LogClass1"); 
+      logger1.trace("Trace Message! sono Slave1");
+      logger1.debug("Debug Message! sono Slave1");
+      logger1.info("Info Message! sono Slave1");
+      logger1.warn("Warn Message! sono Slave1");
+      logger1.error("Error Message! sono Slave1");
+      logger1.fatal("Fatal Message! sono Slave1"); 
  
-      Logger1.trace("Trace Message! LogClass1");
-      Logger1.debug("Debug Message! LogClass1");
-      Logger1.info("Info Message! LogClass1");
-      Logger1.warn("Warn Message! LogClass1");
-      Logger1.error("Error Message! LogClass1");
-      Logger1.fatal("Fatal Message! LogClass1");
+      Logger1.trace("Trace Message! sono Slave1");
+      Logger1.debug("Debug Message! sono Slave1");
+      Logger1.info("Info Message! sono Slave1");
+      Logger1.warn("Warn Message! sono Slave1");
+      Logger1.error("Error Message! sono Slave1");
+      Logger1.fatal("Fatal Message! sono Slave1");
       
-      Log1.trace("Trace Message! LogClass1");
-      Log1.debug("Debug Message! LogClass1");
-      Log1.info("Info Message! LogClass1");
-      Log1.warn("Warn Message! LogClass1");
-      Log1.error("Error Message! LogClass1");
-      Log1.fatal("Fatal Message! LogClass1");
+      Log1.trace("Trace Message! sono Slave1");
+      Log1.debug("Debug Message! sono Slave1");
+      Log1.info("Info Message! sono Slave1");
+      Log1.warn("Warn Message!sono Slave1");
+      Log1.error("Error Message! sono Slave1");
+      Log1.fatal("Fatal Message! sono Slave1");
      
      }//metodo
    

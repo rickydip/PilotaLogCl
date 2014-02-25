@@ -1,0 +1,4 @@
+ INFO [main] (Slave2.java:36) - Info Message!   sono Slave2
+ INFO [main] (Slave2.java:43) - Info Message!  sono Slave2
+ INFO [main] (Slave2.java:50) - Info Message!  sono Slave2
+ INFO [main] (Slave2.java:57) - Info Message!  sono Slave2

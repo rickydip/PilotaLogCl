@@ -1,0 +1,8 @@
+ERROR [main] (Master.java:50) - Error Message! sono  Master
+FATAL [main] (Master.java:51) - Fatal Message! sono  Master
+ERROR [main] (Master.java:57) - Error Message! sono Master
+FATAL [main] (Master.java:58) - Fatal Message! sono Master
+ERROR [main] (Master.java:64) - Error Message! sono Master
+FATAL [main] (Master.java:65) - Fatal Message! sono Master
+ERROR [main] (Master.java:71) - Error Message! sono Master
+FATAL [main] (Master.java:72) - Fatal Message! sono Master

@@ -1,0 +1,10 @@
+2014-02-25 16:59:09,861 [main] ERROR (Slave1.java:45) Error Message! comodo, su Slave1
+2014-02-25 16:59:09,862 [main] FATAL (Slave1.java:46) Fatal Message! comodo, su Slave1
+2014-02-25 16:59:09,863 [main] ERROR (Slave1.java:54) Error Message! sono Slave1
+2014-02-25 16:59:09,863 [main] FATAL (Slave1.java:55) Fatal Message! sono Slave1
+2014-02-25 16:59:09,863 [main] ERROR (Slave1.java:61) Error Message! sono Slave1
+2014-02-25 16:59:09,863 [main] FATAL (Slave1.java:62) Fatal Message! sono Slave1
+2014-02-25 16:59:09,866 [main] ERROR (Slave1.java:68) Error Message! sono Slave1
+2014-02-25 16:59:09,866 [main] FATAL (Slave1.java:69) Fatal Message! sono Slave1
+2014-02-25 16:59:09,867 [main] ERROR (Slave1.java:75) Error Message! sono Slave1
+2014-02-25 16:59:09,867 [main] FATAL (Slave1.java:76) Fatal Message! sono Slave1

@@ -1,4 +1,0 @@
-2014-02-25 16:59:09,872 [main] ERROR (Slave3.java:43) Error Message! comodo2 su slave3
-2014-02-25 16:59:09,873 [main] FATAL (Slave3.java:44) Fatal Message! comodo2 su slave3
-2014-02-25 16:59:09,873 [main] ERROR (Slave3.java:51) Error Message! italia dichiarato su slave3
-2014-02-25 16:59:09,873 [main] FATAL (Slave3.java:52) Fatal Message! italia dichiarato su slave3

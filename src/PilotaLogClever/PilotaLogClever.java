@@ -6,7 +6,13 @@ package PilotaLogClever;
 import java.io.File;
 import PilotaLogClever.slaves.*;
 import componentiLogger.LOG;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.logging.Level;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * contiene il main del Pilota
@@ -58,7 +64,18 @@ static int m = 5;
     * @param args 
     */ 
    public static void main(String[] args) {
-        int flag=0; 
+    
+       
+   ///###############################    
+          
+   // PropertyConfigurator.configure("/home/riccardo/NetBeansProjects/PilotaLogCl/src/logger.properties");//prop
+   // BasicConfigurator.configure();
+    ///###############################    
+   
+       
+       
+       
+       int flag=0; 
 
      
     //creo l'oggetto entro cui si svolgono tutte le operazioni  
@@ -76,7 +93,7 @@ static int m = 5;
      //#######################################
       flag=log.creaFileConfigurazioneLog();//#
      //ASSEGNO IL FILE CREATO A LOG4J      //#
-     if(flag==0){log.assegnaConfToLog4j();}//#
+   //  if(flag==0){log.assegnaConfToLog4j();}//#
      //#######################################
      
 
@@ -107,8 +124,7 @@ static int m = 5;
       
   
      
-   }//main
-   
+   }   
 
    /**
     * contiene comandi per simulare la presenza di 3 componenti software:

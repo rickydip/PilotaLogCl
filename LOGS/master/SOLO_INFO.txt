@@ -1,4 +1,0 @@
-2014-02-25 16:59:09 INFO [PilotaLogClever.Master:48] - Info Message! sono Master
-2014-02-25 16:59:09 INFO [PilotaLogClever.Master:55] - Info Message! sono Master
-2014-02-25 16:59:09 INFO [PilotaLogClever.Master:62] - Info Message! sono Master
-2014-02-25 16:59:09 INFO [PilotaLogClever.Master:69] - Info Message! sono Master

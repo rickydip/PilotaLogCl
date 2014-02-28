@@ -1,8 +1,0 @@
-ERROR [main] (Slave.java:53) - Error Message! sono  Slave
-FATAL [main] (Slave.java:54) - Fatal Message! sono  Slave
-ERROR [main] (Slave.java:60) - Error Message! sono Slave
-FATAL [main] (Slave.java:61) - Fatal Message! sono Slave
-ERROR [main] (Slave.java:67) - Error Message! sono Slave
-FATAL [main] (Slave.java:68) - Fatal Message! sono Slave
-ERROR [main] (Slave.java:74) - Error Message! sono Slave
-FATAL [main] (Slave.java:75) - Fatal Message! sono Slave

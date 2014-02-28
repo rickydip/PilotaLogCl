@@ -8,7 +8,9 @@ all'interno del path del file di configurazione
 package PilotaLogClever.slaves;
 
 import java.io.File;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
 
 
@@ -37,6 +39,10 @@ public class Slave1 {
    public void metodo(){
            
    // comodo=Logger.getLogger("comodo1");
+    PropertyConfigurator.configure("/home/riccardo/NetBeansProjects/PilotaLogCl/src/logger.properties");//prop
+    BasicConfigurator.configure();
+       
+       
        
    if (comodo!=null)   {
       comodo.debug("Info Message! comodo, su Slave1");

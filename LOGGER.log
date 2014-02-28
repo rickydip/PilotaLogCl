@@ -1,0 +1,265 @@
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,927 [main] DEBUG comodo1 {48}- Info Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,929 [main] INFO  comodo1 {49}- Info Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,929 [main] WARN  comodo1 {50}- Warn Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,930 [main] ERROR comodo1 {51}- Error Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,931 [main] FATAL comodo1 {52}- Fatal Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,931 [main] DEBUG pippo {57}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,931 [main] INFO  pippo {58}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,931 [main] WARN  pippo {59}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,931 [main] ERROR pippo {60}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,931 [main] FATAL pippo {61}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,932 [main] DEBUG pluto {64}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,932 [main] INFO  pluto {65}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,932 [main] WARN  pluto {66}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,932 [main] ERROR pluto {67}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,932 [main] FATAL pluto {68}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,932 [main] DEBUG paperino {71}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,933 [main] INFO  paperino {72}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,933 [main] WARN  paperino {73}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,933 [main] ERROR paperino {74}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,934 [main] FATAL paperino {75}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,934 [main] DEBUG paperina {78}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,934 [main] INFO  paperina {79}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,934 [main] WARN  paperina {80}- Warn Message!sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,934 [main] ERROR paperina {81}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:54:41,934 [main] FATAL paperina {82}- Fatal Message! sono Slave1
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,934 [main] DEBUG com_foo {58}- Debug Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,934 [main] INFO  com_foo {59}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,934 [main] WARN  com_foo {60}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,934 [main] ERROR com_foo {61}- Error Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,934 [main] FATAL com_foo {62}- Fatal Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] DEBUG com_foo_bar {65}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] INFO  com_foo_bar {66}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] WARN  com_foo_bar {67}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] ERROR com_foo_bar {68}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] FATAL com_foo_bar {69}- Fatal Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] DEBUG logger {72}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] INFO  logger {73}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] WARN  logger {74}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] ERROR logger {75}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] FATAL logger {76}- Fatal Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,935 [main] DEBUG log {79}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,936 [main] INFO  log {80}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,936 [main] WARN  log {81}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,936 [main] ERROR log {82}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:54:41,936 [main] FATAL log {83}- Fatal Message! sono Master
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] DEBUG comodo2 {40}- Debug Message! comodo2  su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] INFO  comodo2 {41}- Info Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] WARN  comodo2 {42}- Warn Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] ERROR comodo2 {43}- Error Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] FATAL comodo2 {44}- Fatal Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] DEBUG italia {48}- Debug Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,937 [main] INFO  italia {49}- Info Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,938 [main] WARN  italia {50}- Warn Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,938 [main] ERROR italia {51}- Error Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:54:41,938 [main] FATAL italia {52}- Fatal Message! italia dichiarato su slave3
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,938 [main] DEBUG a {50}- Debug Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,938 [main] INFO  a {51}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,938 [main] WARN  a {52}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,938 [main] ERROR a {53}- Error Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,938 [main] FATAL a {54}- Fatal Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,938 [main] DEBUG b {57}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] INFO  b {58}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] WARN  b {59}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] ERROR b {60}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] FATAL b {61}- Fatal Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] DEBUG c {64}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] INFO  c {65}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] WARN  c {66}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] ERROR c {67}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] FATAL c {68}- Fatal Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,939 [main] DEBUG d {71}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,940 [main] INFO  d {72}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,940 [main] WARN  d {73}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,940 [main] ERROR d {74}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:54:41,940 [main] FATAL d {75}- Fatal Message! sono Slave
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,944 [main] DEBUG Juventus {35}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,944 [main] INFO  Juventus {36}- Info Message!   sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,944 [main] WARN  Juventus {37}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,944 [main] ERROR Juventus {38}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,944 [main] FATAL Juventus {39}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] DEBUG Milan {42}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] INFO  Milan {43}- Info Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] WARN  Milan {44}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] ERROR Milan {45}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] FATAL Milan {46}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] DEBUG Barcellona {49}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] INFO  Barcellona {50}- Info Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] WARN  Barcellona {51}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] ERROR Barcellona {52}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,945 [main] FATAL Barcellona {53}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,946 [main] DEBUG Inter {56}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,946 [main] INFO  Inter {57}- Info Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,946 [main] WARN  Inter {58}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,946 [main] ERROR Inter {59}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:54:41,946 [main] FATAL Inter {60}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,560 [main] DEBUG comodo1 {48}- Info Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,562 [main] INFO  comodo1 {49}- Info Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,562 [main] WARN  comodo1 {50}- Warn Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,562 [main] ERROR comodo1 {51}- Error Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,563 [main] FATAL comodo1 {52}- Fatal Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] DEBUG pippo {57}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] INFO  pippo {58}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] WARN  pippo {59}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] ERROR pippo {60}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] FATAL pippo {61}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] DEBUG pluto {64}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] INFO  pluto {65}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,564 [main] WARN  pluto {66}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,565 [main] ERROR pluto {67}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,565 [main] FATAL pluto {68}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,565 [main] DEBUG paperino {71}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] INFO  paperino {72}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] WARN  paperino {73}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] ERROR paperino {74}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] FATAL paperino {75}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] DEBUG paperina {78}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] INFO  paperina {79}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,567 [main] WARN  paperina {80}- Warn Message!sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,568 [main] ERROR paperina {81}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:07,568 [main] FATAL paperina {82}- Fatal Message! sono Slave1
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] DEBUG com_foo {58}- Debug Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] INFO  com_foo {59}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] WARN  com_foo {60}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] ERROR com_foo {61}- Error Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] FATAL com_foo {62}- Fatal Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] DEBUG com_foo_bar {65}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,568 [main] INFO  com_foo_bar {66}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] WARN  com_foo_bar {67}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] ERROR com_foo_bar {68}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] FATAL com_foo_bar {69}- Fatal Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] DEBUG logger {72}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] INFO  logger {73}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] WARN  logger {74}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] ERROR logger {75}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] FATAL logger {76}- Fatal Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,569 [main] DEBUG log {79}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,570 [main] INFO  log {80}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,570 [main] WARN  log {81}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,570 [main] ERROR log {82}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:07,570 [main] FATAL log {83}- Fatal Message! sono Master
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,571 [main] DEBUG comodo2 {40}- Debug Message! comodo2  su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,571 [main] INFO  comodo2 {41}- Info Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,571 [main] WARN  comodo2 {42}- Warn Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,571 [main] ERROR comodo2 {43}- Error Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,572 [main] FATAL comodo2 {44}- Fatal Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,572 [main] DEBUG italia {48}- Debug Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,572 [main] INFO  italia {49}- Info Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,572 [main] WARN  italia {50}- Warn Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,572 [main] ERROR italia {51}- Error Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:07,572 [main] FATAL italia {52}- Fatal Message! italia dichiarato su slave3
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,572 [main] DEBUG a {50}- Debug Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,572 [main] INFO  a {51}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] WARN  a {52}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] ERROR a {53}- Error Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] FATAL a {54}- Fatal Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] DEBUG b {57}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] INFO  b {58}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] WARN  b {59}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,573 [main] ERROR b {60}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] FATAL b {61}- Fatal Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] DEBUG c {64}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] INFO  c {65}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] WARN  c {66}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] ERROR c {67}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] FATAL c {68}- Fatal Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,574 [main] DEBUG d {71}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,575 [main] INFO  d {72}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,575 [main] WARN  d {73}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,575 [main] ERROR d {74}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:07,575 [main] FATAL d {75}- Fatal Message! sono Slave
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] DEBUG Juventus {35}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] INFO  Juventus {36}- Info Message!   sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] WARN  Juventus {37}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] ERROR Juventus {38}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] FATAL Juventus {39}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] DEBUG Milan {42}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,580 [main] INFO  Milan {43}- Info Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] WARN  Milan {44}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] ERROR Milan {45}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] FATAL Milan {46}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] DEBUG Barcellona {49}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] INFO  Barcellona {50}- Info Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] WARN  Barcellona {51}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] ERROR Barcellona {52}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] FATAL Barcellona {53}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,581 [main] DEBUG Inter {56}- Debug Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,582 [main] INFO  Inter {57}- Info Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,582 [main] WARN  Inter {58}- Warn Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,582 [main] ERROR Inter {59}- Error Message!  sono Slave2
+PilotaLogClever.slaves.Slave2: metodo 2014-02-28 15:55:07,582 [main] FATAL Inter {60}- Fatal Message!  sono Slave2
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,585 [main] DEBUG comodo1 {48}- Info Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,587 [main] INFO  comodo1 {49}- Info Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,588 [main] WARN  comodo1 {50}- Warn Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,588 [main] ERROR comodo1 {51}- Error Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,589 [main] FATAL comodo1 {52}- Fatal Message! comodo, su Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,589 [main] DEBUG pippo {57}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,589 [main] INFO  pippo {58}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] WARN  pippo {59}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] ERROR pippo {60}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] FATAL pippo {61}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] DEBUG pluto {64}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] INFO  pluto {65}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] WARN  pluto {66}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] ERROR pluto {67}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,590 [main] FATAL pluto {68}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,591 [main] DEBUG paperino {71}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,592 [main] INFO  paperino {72}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] WARN  paperino {73}- Warn Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] ERROR paperino {74}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] FATAL paperino {75}- Fatal Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] DEBUG paperina {78}- Debug Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] INFO  paperina {79}- Info Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] WARN  paperina {80}- Warn Message!sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] ERROR paperina {81}- Error Message! sono Slave1
+PilotaLogClever.slaves.Slave1: metodo 2014-02-28 15:55:32,593 [main] FATAL paperina {82}- Fatal Message! sono Slave1
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,593 [main] DEBUG com_foo {58}- Debug Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] INFO  com_foo {59}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] WARN  com_foo {60}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] ERROR com_foo {61}- Error Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] FATAL com_foo {62}- Fatal Message! sono  Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] DEBUG com_foo_bar {65}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] INFO  com_foo_bar {66}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] WARN  com_foo_bar {67}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,594 [main] ERROR com_foo_bar {68}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] FATAL com_foo_bar {69}- Fatal Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] DEBUG logger {72}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] INFO  logger {73}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] WARN  logger {74}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] ERROR logger {75}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] FATAL logger {76}- Fatal Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] DEBUG log {79}- Debug Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] INFO  log {80}- Info Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,595 [main] WARN  log {81}- Warn Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,596 [main] ERROR log {82}- Error Message! sono Master
+PilotaLogClever.Master: metodo 2014-02-28 15:55:32,596 [main] FATAL log {83}- Fatal Message! sono Master
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] DEBUG comodo2 {40}- Debug Message! comodo2  su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] INFO  comodo2 {41}- Info Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] WARN  comodo2 {42}- Warn Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] ERROR comodo2 {43}- Error Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] FATAL comodo2 {44}- Fatal Message! comodo2 su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] DEBUG italia {48}- Debug Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,597 [main] INFO  italia {49}- Info Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,598 [main] WARN  italia {50}- Warn Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,598 [main] ERROR italia {51}- Error Message! italia dichiarato su slave3
+PilotaLogClever.slaves.Slave3: metodo 2014-02-28 15:55:32,598 [main] FATAL italia {52}- Fatal Message! italia dichiarato su slave3
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,598 [main] DEBUG a {50}- Debug Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,598 [main] INFO  a {51}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,598 [main] WARN  a {52}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,598 [main] ERROR a {53}- Error Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] FATAL a {54}- Fatal Message! sono  Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] DEBUG b {57}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] INFO  b {58}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] WARN  b {59}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] ERROR b {60}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] FATAL b {61}- Fatal Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] DEBUG c {64}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] INFO  c {65}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,599 [main] WARN  c {66}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] ERROR c {67}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] FATAL c {68}- Fatal Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] DEBUG d {71}- Debug Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] INFO  d {72}- Info Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] WARN  d {73}- Warn Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] ERROR d {74}- Error Message! sono Slave
+PilotaLogClever.Slave: metodo 2014-02-28 15:55:32,600 [main] FATAL d {75}- Fatal Message! sono Slave

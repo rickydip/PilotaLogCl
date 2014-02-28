@@ -9,13 +9,24 @@ package PilotaLogClever;
 
 import PilotaLogClever.slaves.Slave1;
 import java.io.File;
+import java.io.InputStream;
+
+import java.util.Properties;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
 
 
 public class Master {
     
     //attributi di classe
+    //Properties prop = new Properties();
+    //InputStream in = getClass().getResourceAsStream( "logger.properties" );
+    //prop.load(in);
+    //PropertyConfigurator.configure( prop );
+    
+    
+    
     
     
     //logger del componenete software master 
